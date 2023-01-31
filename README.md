@@ -1,4 +1,4 @@
-# 🔥 🔥 Language Learning Flutter UI Kit 🔥 🔥 💫 ⭐️ ⭐️ 👨‍💻
+Kichwa Language Learning Application Build With Flutter UI Kit
 
 Free Flutter UI Kits based on designs on UpLabs 💓.
 Repo will be updated daily with new beautiful UI Kits.
