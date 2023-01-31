@@ -8,10 +8,10 @@
 
 ### Screenshots
 
-![Screenshot 1](https://res.cloudinary.com/olayemii/image/upload/v1611746964/assets/ss1_pia2pp.png) 
-![Screenshot 2](https://res.cloudinary.com/olayemii/image/upload/v1611747003/assets/ss2_pgybzj.png) 
-![Screenshot 3](https://res.cloudinary.com/olayemii/image/upload/v1611747014/assets/ss3_a9syef.png) 
-![Screenshot 4](https://res.cloudinary.com/olayemii/image/upload/v1611747018/assets/ss4_pmelto.png)
+![Screenshot 1](https://drive.google.com/file/d/1T6dJnLnzvSbDCbfPnUXjBr4OHbhHvxaP/view?usp=share_link) 
+![Screenshot 2](https://drive.google.com/file/d/1cFEv0x8E3QXBkNvYARxLQvfoZEicnA8u/view?usp=share_link) 
+![Screenshot 3](https://drive.google.com/file/d/1QOO_T6PbKOjGn2ZycTz4qgztBQxyPABr/view?usp=share_link) 
+![Screenshot 4](https://drive.google.com/file/d/1PB2Z6ycJtqbTMjGWcGmu4uxUVKQrYgCS/view?usp=share_link)
 
 ### Built From Language Learning Flutter UI By ariscybertech
 
