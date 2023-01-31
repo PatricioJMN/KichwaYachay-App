@@ -8,10 +8,10 @@
 
 ### Screenshots
 
-![](https://i.ibb.co/jTggZrT/img-01.png =250x250) 
-![](https://i.ibb.co/ZGz9d1W/01-lessons.png | width=100)
-![](https://i.ibb.co/ZGz9d1W/01-lessons.png | width=100) 
-![](https://i.ibb.co/fYBj1Vm/04-quiz-screen.png | width=100) 
+![](https://i.ibb.co/jTggZrT/img-01.png) 
+![](https://i.ibb.co/ZGz9d1W/01-lessons.png)
+![](https://i.ibb.co/ZGz9d1W/01-lessons.png) 
+![](https://i.ibb.co/fYBj1Vm/04-quiz-screen.png) 
 
 
 https://ibb.co/dgtRvkR
