@@ -1,0 +1,124 @@
+{
+  "unit": [
+    {
+      "id": 1,
+      "lessons": [
+        {
+          "id": 1,
+          "quiz": [
+            {
+              "color": "Negro",
+              "traduccion": "Yana"
+            },
+            {
+              "color": "Rojo",
+              "traduccion": "Puka"
+            },
+            {
+              "color": "Blanco",
+              "traduccion": "Yurak"
+            },
+            {
+              "color": "Amarillo",
+              "traduccion": "Qillu"
+            },
+            {
+              "color": "Azul",
+              "traduccion": "Anqas"
+            },
+            {
+              "color": "Morado",
+              "traduccion": "Kulli"
+            },
+            {
+              "color": "Plomo",
+              "traduccion": "Uqi"
+            },
+            {
+              "color": "Verde",
+              "traduccion": "Qumir"
+            },
+            {
+              "color": "Celeste",
+              "traduccion": "Qamya anqas"
+            },
+            {
+              "color": "Rosado",
+              "traduccion": "Qamya puka"
+            },
+            {
+              "color": "Azul Oscuro",
+              "traduccion": "Yana anqas"
+            },
+            {
+              "color": "Verde Oscuro",
+              "traduccion": "Yana qumir"
+            },
+            {
+              "color": "Café",
+              "traduccion": "Chumpi"
+            },
+            {
+              "color": "Naranja",
+              "traduccion": "Nina puka"
+            },
+            {
+              "color": "Dorado",
+              "traduccion": "Quri"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "quiz": [
+            {
+              "question": "lalala",
+              "answer": "lalala"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "quiz": [
+            {
+              "question": "lalala",
+              "answer": "lalala"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "lessons": [
+        {
+          "id": 1,
+          "quiz": [
+            {
+              "question": "lalala",
+              "answer": "lalala"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "quiz": [
+            {
+              "question": "lalala",
+              "answer": "lalala"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "quiz": [
+            {
+              "question": "lalala",
+              "answer": "lalala"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

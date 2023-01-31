@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "331350361468",
+    "project_id": "kichwayachay-78c4f",
+    "storage_bucket": "kichwayachay-78c4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331350361468:android:8be9862c07cc82131590f9",
+        "android_client_info": {
+          "package_name": "com.example.aris_language_learning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331350361468-rtft33u4b7dcp8uml6h0ukke1gp26o54.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aris_language_learning",
+            "certificate_hash": "0eb2f630da675faa38af1699f934402ad11b4eb2"
+          }
+        },
+        {
+          "client_id": "331350361468-23t8qjpulha0s3n0jsod0jpc4ku6sb1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG9I6zbfzmpN1_mJGbPc9rbhHt9cSSFko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331350361468-23t8qjpulha0s3n0jsod0jpc4ku6sb1d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "331350361468-lkdufj1v2h8rv2q9ecctnhekp6j905mt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.arisLanguageLearning"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
