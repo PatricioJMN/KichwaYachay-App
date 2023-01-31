@@ -15,6 +15,6 @@
 
 ### Built From Language Learning Flutter UI By ariscybertech
 
-![URL 1](https://github.com/ariscybertech/aris_language_learning)
+https://github.com/ariscybertech/aris_language_learning
 
 ![Main Page](https://res.cloudinary.com/olayemii/image/upload/v1611748849/assets/language-1_oestuf.png)
