@@ -8,9 +8,9 @@
 
 ### Screenshots
 
-<img src="https://i.ibb.co/jTggZrT/img-01.png" width="480" height="800">
-<img src="https://i.ibb.co/ZGz9d1W/01-lessons.png" width="480" height="800">
-<img src="https://i.ibb.co/fYBj1Vm/04-quiz-screen.png" width="480" height="800">
+<img src="https://i.ibb.co/jTggZrT/img-01.png" width="420" height="800">
+<img src="https://i.ibb.co/ZGz9d1W/01-lessons.png" width="420" height="800">
+<img src="https://i.ibb.co/fYBj1Vm/04-quiz-screen.png" width="420" height="800">
 
 
 https://ibb.co/dgtRvkR
