@@ -1,0 +1,12 @@
+[
+  { "question": "¿Cuál animal Negro es?", "questionK": "¿Maykan Wiwa Yanata Kan?", "traduction": "Misika Yanami Kan" },
+  { "question": "¿Cuál animal Blanco es?", "questionK": "¿Maykan Wiwa Yurakta Kan?", "traduction": "Allukuka Yurakmi Kan" },
+  { "question": "¿Cuál animal Rojo es?", "questionK": "¿Maykan Wiwa Pukata Kan?", "traduction": "Challwaka Pukami Kan" },
+  { "question": "¿Cuál animal Amarillo es?", "questionK": "¿Maykan Wiwa Killuta Kan?", "traduction": "Amaruka Qillumi Kan" },
+  { "question": "¿Cuál animal Azul es?", "questionK": "¿Maykan Wiwa Anqas Kan?", "traduction": "Walchaka Anqas Kan" }, 
+  { "question": "¿Cuál animal Verde es?", "questionK": "¿Maykan Wiwa Qumir Kan?", "traduction": "Hampatu Qumir Kan" },
+  { "question": "¿Cuál animal Celeste es?", "questionK": "¿Maykan Wiwa Qamya Anqas Kan?","traduction": "Challuwa Qamya Anqas Kan" },
+  { "question": "¿Cuál animal Rosado es?", "questionK": "¿Maykan Wiwa Qamya Puka Kan?","traduction": "Kuchi Qamya Puka Kan" },
+  { "question": "¿Cuál animal Azul Oscuro es?", "questionK": "¿Maykan Wiwa Yana Anqas Kan?","traduction": "Pillpintu Yana Anqas Kan" },
+  { "question": "¿Cuál animal Verde Oscuro es?", "questionK": "¿Maykan Wiwa Yana Qumir Kan?","traduction": "Waksa Yana Qumir Kan" }
+]
