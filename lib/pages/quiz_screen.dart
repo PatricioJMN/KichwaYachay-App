@@ -7,7 +7,11 @@ import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/pages/results_page.dart';
 
 class QuizScreen extends StatefulWidget {
-  const QuizScreen({Key? key}) : super(key: key);
+  final String unity;
+  final String lesson;
+
+  const QuizScreen({Key? key, required this.unity, required this.lesson})
+      : super(key: key);
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -15,14 +19,15 @@ class QuizScreen extends StatefulWidget {
 
 class _QuizScreenState extends State<QuizScreen> {
   int totalQuestions = 6;
-  int totalOptions = 5;
+  int totalOptions = 3;
   int questionIndex = 0;
   int progressIndex = 0;
 
-  Quiz quiz = Quiz(name: "Lección 1", questions: []);
+  Quiz quiz = Quiz(name: "Lección", questions: []);
 
   Future<void> readJson() async {
-    final String response = await rootBundle.loadString('assets/test.json');
+    final String response = await rootBundle.loadString(
+        'assets/unity_${widget.unity}_lesson_${widget.lesson}.json');
     final List<dynamic> data = await json.decode(response);
     List<int> optionList = List<int>.generate(data.length, (i) => i);
     List<int> questionsAdded = [];
@@ -158,8 +163,7 @@ class _QuizScreenState extends State<QuizScreen> {
                           Container(
                             color: Constants.redtortaKY,
                             margin: const EdgeInsets.all(15),
-                            child: Text(
-                                "${quiz.questions[questionIndex].question}?",
+                            child: Text(quiz.questions[questionIndex].question,
                                 style: const TextStyle(
                                   fontSize: 15.0,
                                   color: Colors.black,

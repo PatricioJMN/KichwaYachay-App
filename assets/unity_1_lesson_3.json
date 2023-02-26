@@ -1,104 +1,90 @@
 [
   {
-    "question": "Negro",
+    "question": "¿Cuál animal Negro es?",
 	"questionK": "",
     "traduccion": "Yana",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Rojo",
+    "question": "¿Cuál animal Rojo es?",
 	"questionK": "",
     "traduccion": "Puka",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Blanco",
+    "question": "¿Cuál animal Blanco es?",
 	"questionK": "",
     "traduccion": "Yurak",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Amarillo",
+    "question": "¿Cuál animal Amarillo es?",
 	"questionK": "",
     "traduccion": "Qillu",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Azul",
+    "question": "¿Cuál animal Azul es?",
 	"questionK": "",
     "traduccion": "Anqas",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Morado",
-	"questionK": "",
-    "traduccion": "Kulli",
-	"audioPath": "",
-	"imagePath": ""
-  },
-  {
-    "color": "Plomo",
+    "question": "¿Cuál animal Plomo es?",	
 	"questionK": "",
     "traduccion": "Uqi",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Verde",
+    "question": "¿Cuál animal Verde es?",	
 	"questionK": "",
     "traduccion": "Qumir",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Celeste",
+    "question": "¿Cuál animal Celeste es?",	
 	"questionK": "",
     "traduccion": "Qamya anqas",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Rosado",
+    "question": "¿Cuál animal Rosado es?",	
 	"questionK": "",
     "traduccion": "Qamya puka",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Azul Oscuro",
-	"questionK": "",
-    "traduccion": "Yana anqas",
-	"audioPath": "",
-	"imagePath": ""
-  },
-  {
-    "color": "Verde Oscuro",
+    "question": "¿Cuál animal Verde Oscuro es?",	
 	"questionK": "",
     "traduccion": "Yana qumir",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Café",
+    "question": "¿Cuál animal Café es?",	
 	"questionK": "",
     "traduccion": "Chumpi",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Naranja",
+    "question": "¿Cuál animal Naranja es?",	
 	"questionK": "",
     "traduccion": "Nina puka",
 	"audioPath": "",
 	"imagePath": ""
   },
   {
-    "color": "Dorado",
+    "question": "¿Cuál animal Dorado es?",	
 	"questionK": "",
     "traduccion": "Quri",
 	"audioPath": "",

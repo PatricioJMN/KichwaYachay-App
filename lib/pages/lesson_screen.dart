@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/models/lesson_model.dart';
+// ignore: unused_import
 import 'package:language_learning_ui/pages/quiz_home_page.dart';
+// ignore: unused_import
 import 'package:language_learning_ui/pages/quiz_screen.dart';
 import 'package:language_learning_ui/widgets/bottom_bar.dart';
 import 'package:language_learning_ui/widgets/lesson_card.dart';
@@ -24,7 +26,6 @@ class _LessonScreenState extends State<LessonScreen> {
       imagePath: "assets/images/lesson.png",
       title: "Lección 01",
       duration: "25 minutos",
-      quiz: const QuizScreen(),
     ),
     LessonModel(
       unityIndex: "1",
@@ -32,7 +33,6 @@ class _LessonScreenState extends State<LessonScreen> {
       imagePath: "assets/images/lesson.png",
       title: "Lección 02",
       duration: "13 minutos",
-      quiz: const QuizScreen(),
     ),
     LessonModel(
       unityIndex: "1",
@@ -40,7 +40,6 @@ class _LessonScreenState extends State<LessonScreen> {
       imagePath: "assets/images/lesson.png",
       title: "Lección 03",
       duration: "15 minutos",
-      quiz: const QuizScreen(),
     ),
   ];
   @override

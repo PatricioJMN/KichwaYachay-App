@@ -4,7 +4,10 @@ import 'package:language_learning_ui/pages/quiz_screen.dart';
 import 'package:language_learning_ui/pages/review_quiz_page.dart';
 
 class QuizHomePage extends StatelessWidget {
-  const QuizHomePage({Key? key}) : super(key: key);
+  final String unity;
+  final String lesson;
+  const QuizHomePage({Key? key, required this.unity, required this.lesson})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,10 +47,10 @@ class QuizHomePage extends StatelessWidget {
                             end: Alignment.bottomLeft,
                             colors: [Constants.orangeKY, Constants.yellowKY]),
                         borderRadius: BorderRadius.circular(5)),
-                    child: const Center(
+                    child: Center(
                       child: Text(
-                        'Lección 1',
-                        style: TextStyle(
+                        'Lección $lesson',
+                        style: const TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
                             color: Colors.black),
@@ -59,7 +62,10 @@ class QuizHomePage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const QuizScreen()));
+                              builder: (context) => QuizScreen(
+                                    unity: unity,
+                                    lesson: lesson,
+                                  )));
                     },
                     style: OutlinedButton.styleFrom(
                       foregroundColor: Colors.black,
@@ -77,7 +83,10 @@ class QuizHomePage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ReviewQuizPage()));
+                              builder: (context) => ReviewQuizPage(
+                                    unity: unity,
+                                    lesson: lesson,
+                                  )));
                     },
                     style: OutlinedButton.styleFrom(
                       foregroundColor: Colors.black,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
+// ignore: import_of_legacy_library_into_null_safe, unused_import
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
@@ -70,10 +70,8 @@ class LessonCard extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const QuizHomePage()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => QuizHomePage(unity: lesson.unityIndex, lesson: lesson.lessonIndex,)));
                 },
                 child: const Text('Iniciar')),
             const SizedBox(

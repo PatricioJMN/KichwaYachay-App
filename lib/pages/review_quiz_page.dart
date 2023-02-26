@@ -6,21 +6,25 @@ import 'package:language_learning_ui/classes/quiz.dart';
 import 'package:language_learning_ui/constants.dart';
 
 class ReviewQuizPage extends StatefulWidget {
-  const ReviewQuizPage({Key? key}) : super(key: key);
+  final String unity;
+  final String lesson;
+  const ReviewQuizPage({Key? key, required this.unity, required this.lesson})
+      : super(key: key);
 
   @override
   State<ReviewQuizPage> createState() => _ReviewQuizPageState();
 }
 
 class _ReviewQuizPageState extends State<ReviewQuizPage> {
-  Quiz quiz = Quiz(name: 'Quiz de Colores', questions: []);
+  Quiz quiz = Quiz(name: 'Quiz', questions: []);
 
   Future<void> readJson() async {
-    final String response = await rootBundle.loadString('assets/test.json');
+    final String response = await rootBundle.loadString(
+        'assets/unity_${widget.unity}_lesson_${widget.lesson}.json');
     final List<dynamic> data = await json.decode(response);
     for (var item in data) {
       Question question = Question.fromJson(item);
-      question.question += question.color;
+      // question.question = question.question;
       quiz.questions.add(question);
     }
     setState(() {});
@@ -67,7 +71,7 @@ class _ReviewQuizPageState extends State<ReviewQuizPage> {
                             color: Constants.yellowaguitaKY,
                             child: ListTile(
                               leading: Text("${index + 1}"),
-                              title: Text("${quiz.questions[index].question}?"),
+                              title: Text(quiz.questions[index].question),
                               trailing: Text(quiz.questions[index].answer),
                             ),
                           );
