@@ -151,7 +151,7 @@ class _QuizScreenState extends State<QuizScreen> {
             ),
           ),
           ConstrainedBox(
-            constraints: const BoxConstraints(maxHeight: 450),
+            constraints: const BoxConstraints(maxHeight: 550),
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
               child: quiz.questions.isNotEmpty
@@ -163,7 +163,8 @@ class _QuizScreenState extends State<QuizScreen> {
                           Container(
                             color: Constants.redtortaKY,
                             margin: const EdgeInsets.all(15),
-                            child: Text(quiz.questions[questionIndex].question,
+                            child: Text(
+                                '${quiz.questions[questionIndex].question}\n${quiz.questions[questionIndex].questionK}',
                                 style: const TextStyle(
                                   fontSize: 15.0,
                                   color: Colors.black,
@@ -192,15 +193,23 @@ class _QuizScreenState extends State<QuizScreen> {
                                       ),
                                     ),
                                     leading: Text('${index + 1}',
+                                        textAlign: TextAlign.center,
                                         style: Theme.of(context)
                                             .textTheme
                                             .bodyLarge),
-                                    title: Text(
-                                        quiz.questions[questionIndex]
-                                            .options[index],
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyLarge),
+                                    title: Center(
+                                        child: Text(
+                                            quiz.questions[questionIndex]
+                                                .options[index],
+                                            textAlign: TextAlign.center,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodyLarge)),
+                                    subtitle: Image.asset(
+                                      'assets/images/unity_${widget.unity}/lesson_${widget.lesson}/${quiz.questions[questionIndex].options[index]}.png',
+                                      width: 75,
+                                      height: 75,
+                                    ),
                                     onTap: () {
                                       _optionSelected(quiz
                                           .questions[questionIndex]

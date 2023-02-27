@@ -16,7 +16,6 @@ class Question {
         imagePath = json['imagePath'];
 
   void addOptions(List<String> newOptions) {
-    question;
     options.add(answer);
     options.addAll(newOptions);
     options.shuffle();

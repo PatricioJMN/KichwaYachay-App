@@ -1,93 +1,93 @@
 [
   {
     "question": "¿Cuál animal Negro es?",
-	"questionK": "",
-    "traduccion": "Yana",
+	"questionK": "Maykan wiwa Yanata kan?",
+    "traduccion": "Añanku yanami kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Añanku yanami kan"
   },
   {
     "question": "¿Cuál animal Rojo es?",
-	"questionK": "",
-    "traduccion": "Puka",
+	"questionK": "Maykan wiwa Yurakta kan?",
+    "traduccion": "Pillpintu pukami kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Pillpintu pukami kan"
   },
   {
     "question": "¿Cuál animal Blanco es?",
-	"questionK": "",
-    "traduccion": "Yurak",
+	"questionK": "Maykan wiwa Yurakta kan?",
+    "traduccion": "Atallpa yurakmi kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Atallpa yurakmi kan"
   },
   {
     "question": "¿Cuál animal Amarillo es?",
-	"questionK": "",
-    "traduccion": "Qillu",
+	"questionK": "Maykan wiwa Qilluta kan?",
+    "traduccion": "Kulta qillumi kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Kulta qillumi kan"
   },
   {
     "question": "¿Cuál animal Azul es?",
-	"questionK": "",
-    "traduccion": "Anqas",
+	"questionK": "Maykan wiwa Anqasta kan?",
+    "traduccion": "Pishku anqasmi kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Pishku anqasmi kan"
   },
   {
     "question": "¿Cuál animal Plomo es?",	
-	"questionK": "",
-    "traduccion": "Uqi",
+	"questionK": "Maykan wiwa Uqita kan?",
+    "traduccion": "Kuntur uqimi kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Kuntur uqimi kan"
   },
   {
     "question": "¿Cuál animal Verde es?",	
-	"questionK": "",
-    "traduccion": "Qumir",
+	"questionK": "Maykan wiwa Qumirta kan?",
+    "traduccion": "Amaru qumirmi kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Amaru qumirmi kan"
   },
   {
     "question": "¿Cuál animal Celeste es?",	
-	"questionK": "",
-    "traduccion": "Qamya anqas",
+	"questionK": "Maykan wiwa Qamya Anqasta kan?",
+    "traduccion": "Walchaka qamya anqasmi kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Walchaka qamya anqasmi kan"
   },
   {
     "question": "¿Cuál animal Rosado es?",	
-	"questionK": "",
-    "traduccion": "Qamya puka",
+	"questionK": "Maykan wiwa Qamya Pukata kan?",
+    "traduccion": "Kuchi qamya pukami kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Kuchi qamya pukami kan"
   },
   {
     "question": "¿Cuál animal Verde Oscuro es?",	
-	"questionK": "",
-    "traduccion": "Yana qumir",
+	"questionK": "Maykan wiwa Yana Qumirta kan?",
+    "traduccion": "Hampatu yana qumirmi kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Hampatu yana qumirmi kan"
   },
   {
     "question": "¿Cuál animal Café es?",	
-	"questionK": "",
-    "traduccion": "Chumpi",
+	"questionK": "Maykan wiwa Chumpita kan?",
+    "traduccion": "Kushillu chumpimi kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Kushillu chumpimi kan"
   },
   {
     "question": "¿Cuál animal Naranja es?",	
-	"questionK": "",
-    "traduccion": "Nina puka",
+	"questionK": "Maykan wiwa Nina Pukata kan?",
+    "traduccion": "Apankura nina pukami kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Apankura nina pukami kan"
   },
   {
     "question": "¿Cuál animal Dorado es?",	
-	"questionK": "",
-    "traduccion": "Quri",
+	"questionK": "Maykan wiwa Qurita kan?",
+    "traduccion": "Challuwa qurimi kan",
 	"audioPath": "",
-	"imagePath": ""
+	"imagePath": "Challuwa qurimi kan"
   }
 ]
