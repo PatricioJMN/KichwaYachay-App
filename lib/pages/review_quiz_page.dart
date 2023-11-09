@@ -6,7 +6,7 @@ import 'package:language_learning_ui/classes/quiz.dart';
 import 'package:language_learning_ui/constants.dart';
 
 class ReviewQuizPage extends StatefulWidget {
-  final String unity;
+  final int unity;
   final String lesson;
   const ReviewQuizPage({Key? key, required this.unity, required this.lesson})
       : super(key: key);

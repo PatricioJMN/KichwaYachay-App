@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:language_learning_ui/constants.dart';
+// import 'package:language_learning_ui/constants.dart';
+import 'package:language_learning_ui/models/topic_model.dart';
+import 'package:language_learning_ui/models/lesson_model.dart';
 import 'package:language_learning_ui/widgets/topic_card.dart';
 
 class TopicsList extends StatelessWidget {
-  const TopicsList({Key? key}) : super(key: key);
+  final List<TopicModel> topics;
+  final List<LessonModel> lesson;
+  const TopicsList({Key? key, required this.topics, required this.lesson})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +22,10 @@ class TopicsList extends StatelessWidget {
           );
         },
         scrollDirection: Axis.horizontal,
-        itemCount: Constants.topics.length,
+        itemCount: topics.length,
         itemBuilder: (BuildContext context, int index) {
           return TopicCard(
-            topic: Constants.topics[index],
+            topic: topics[index],
           );
         },
       ),

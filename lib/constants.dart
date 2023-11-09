@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:language_learning_ui/models/course_model.dart';
 import 'package:language_learning_ui/models/instructor_model.dart';
+import 'package:language_learning_ui/models/lesson_model.dart';
 import 'package:language_learning_ui/models/topic_model.dart';
 import 'package:language_learning_ui/pages/lesson_screen.dart';
 // ignore: unused_import
@@ -22,7 +23,8 @@ class Constants {
   static const Color yellowaguitaKY = Color.fromARGB(255, 217, 190, 131);
   static const Color purpleKY = Color.fromRGBO(81, 65, 84, 1.0);
 
-  static List<TopicModel> topics = [
+// Lista de Cursos: Principiante
+  static List<TopicModel> topicsPrincipiante = [
     TopicModel(
       color: Constants.blueKY,
       boxShadow: [
@@ -37,7 +39,8 @@ class Constants {
       time: "Contiene 3 Lecciones",
       points: "20",
       image: "assets/images/course-1.png",
-      lesson: const LessonScreen(),
+      unity: 1,
+      lesson: const LessonScreen(unity: 1),
     ),
     TopicModel(
       color: Constants.redtortaKY,
@@ -53,7 +56,8 @@ class Constants {
       time: "Contiene n Lecciones",
       points: "20",
       image: "assets/images/course-2.png",
-      lesson: const LessonScreen(),
+      unity: 2,
+      lesson: const LessonScreen(unity: 2),
     ),
     TopicModel(
       color: Constants.yellowaguitaKY,
@@ -69,10 +73,159 @@ class Constants {
       time: "Contiene n Lecciones",
       points: "20",
       image: "assets/images/course-3.png",
-      lesson: const LessonScreen(),
+      unity: 3,
+      lesson: const LessonScreen(unity: 3),
     ),
   ];
+// Lista de Cursos: Intermedio
+  static List<TopicModel> topicsIntermedio = [
+    TopicModel(
+      color: Constants.blueKY,
+      boxShadow: [
+        const BoxShadow(
+          color: Constants.blueKY,
+          spreadRadius: 0,
+          blurRadius: 6,
+          offset: Offset(0, 2), // changes position of shadow
+        ),
+      ],
+      topic: "Unidad 4",
+      time: "Contiene 3 Lecciones",
+      points: "20",
+      image: "assets/images/course-1.png",
+      unity: 4,
+      lesson: const LessonScreen(unity: 4),
+    ),
+    TopicModel(
+      color: Constants.redtortaKY,
+      boxShadow: [
+        const BoxShadow(
+          color: Color.fromRGBO(255, 99, 128, 0.6),
+          spreadRadius: 0,
+          blurRadius: 6,
+          offset: Offset(0, 2), // changes position of shadow
+        ),
+      ],
+      topic: "Unidad 5",
+      time: "Contiene n Lecciones",
+      points: "20",
+      image: "assets/images/course-2.png",
+      unity: 5,
+      lesson: const LessonScreen(unity: 5),
+    ),
+    TopicModel(
+      color: Constants.yellowaguitaKY,
+      boxShadow: [
+        const BoxShadow(
+          color: Color.fromRGBO(255, 99, 128, 0.6),
+          spreadRadius: 0,
+          blurRadius: 6,
+          offset: Offset(0, 2), // changes position of shadow
+        ),
+      ],
+      topic: "Unidad 6",
+      time: "Contiene n Lecciones",
+      points: "20",
+      image: "assets/images/course-3.png",
+      unity: 6,
+      lesson: const LessonScreen(unity: 6),
+    ),
+  ];
+// Lista de Cursos: Principiante
+  static List<TopicModel> topicsAvanzado = [
+    TopicModel(
+      color: Constants.blueKY,
+      boxShadow: [
+        const BoxShadow(
+          color: Constants.blueKY,
+          spreadRadius: 0,
+          blurRadius: 6,
+          offset: Offset(0, 2), // changes position of shadow
+        ),
+      ],
+      topic: "Unidad 7",
+      time: "Contiene 3 Lecciones",
+      points: "20",
+      image: "assets/images/course-1.png",
+      unity: 7,
+      lesson: const LessonScreen(unity: 7),
+    ),
+    TopicModel(
+      color: Constants.redtortaKY,
+      boxShadow: [
+        const BoxShadow(
+          color: Color.fromRGBO(255, 99, 128, 0.6),
+          spreadRadius: 0,
+          blurRadius: 6,
+          offset: Offset(0, 2), // changes position of shadow
+        ),
+      ],
+      topic: "Unidad 8",
+      time: "Contiene n Lecciones",
+      points: "20",
+      image: "assets/images/course-2.png",
+      unity: 8,
+      lesson: const LessonScreen(unity: 8),
+    ),
+    TopicModel(
+      color: Constants.yellowaguitaKY,
+      boxShadow: [
+        const BoxShadow(
+          color: Color.fromRGBO(255, 99, 128, 0.6),
+          spreadRadius: 0,
+          blurRadius: 6,
+          offset: Offset(0, 2), // changes position of shadow
+        ),
+      ],
+      topic: "Unidad 9",
+      time: "Contiene n Lecciones",
+      points: "20",
+      image: "assets/images/course-3.png",
+      unity: 9,
+      lesson: const LessonScreen(unity: 9),
+    ),
+  ];
+// Lista de Lecciones
+  static List<LessonModel> lessons = [
+    LessonModel(
+      unityIndex: 1,
+      lessonIndex: "1",
+      imagePath: "assets/images/lesson.png",
+      title: "Lección 01",
+      duration: "25 minutos",
+    ),
+    LessonModel(
+      unityIndex: 1,
+      lessonIndex: "2",
+      imagePath: "assets/images/lesson.png",
+      title: "Lección 02",
+      duration: "13 minutos",
+    ),
+    LessonModel(
+      unityIndex: 1,
+      lessonIndex: "3",
+      imagePath: "assets/images/lesson.png",
+      title: "Lección 03",
+      duration: "15 minutos",
+    ),
+    LessonModel(
+      unityIndex: 2,
+      lessonIndex: "1",
+      imagePath: "assets/images/lesson.png",
+      title: "Lección 01",
+      duration: "15 minutos",
+    ),
+    LessonModel(
+      unityIndex: 2,
+      lessonIndex: "2",
+      imagePath: "assets/images/lesson.png",
+      title: "Lección 02",
+      duration: "15 minutos",
+    ),
+  ];
+// Lista de Minijuegos
   static List<String> courseLevels = ["Quices", "Minijuegos", "Lecciones"];
+// Cursos
   static List<CourseModel> courses = [
     CourseModel(
       name: "Quiz Aleatorio",
@@ -90,19 +243,25 @@ class Constants {
       image: "assets/images/course-5.png",
     ),
   ];
+  // Desarrolladores
   static List<InstructorModel> instructors = [
     InstructorModel(
       name: "Patricio Mendoza",
-      occupation: "UI Designer",
+      occupation: "Softeare Dev",
       image: "assets/images/person-2.png",
     ),
     InstructorModel(
-      name: "Patricio Mendoza",
+      name: "Saire Conejo",
       occupation: "Software Dev",
       image: "assets/images/person-2.png",
     ),
     InstructorModel(
-      name: "Patricio Mendoza",
+      name: "Brigitte Solórzano",
+      occupation: "Marketing",
+      image: "assets/images/person-2.png",
+    ),
+    InstructorModel(
+      name: "Santiago Ajala",
       occupation: "Database Dev",
       image: "assets/images/person-2.png",
     )

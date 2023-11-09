@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe, unused_import
-import 'package:flutter_icons/flutter_icons.dart';
+// import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/models/lesson_model.dart';
+// import 'package:language_learning_ui/models/unity_model.dart';
 import 'package:language_learning_ui/pages/quiz_home_page.dart';
 
 class LessonCard extends StatelessWidget {
   final LessonModel lesson;
-  const LessonCard({Key? key, required this.lesson}) : super(key: key);
+  final int unity;
+  const LessonCard({Key? key, required this.lesson, required this.unity})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -70,8 +73,13 @@ class LessonCard extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => QuizHomePage(unity: lesson.unityIndex, lesson: lesson.lessonIndex,)));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => QuizHomePage(
+                                unity: unity,
+                                lesson: lesson.lessonIndex,
+                              )));
                 },
                 child: const Text('Iniciar')),
             const SizedBox(

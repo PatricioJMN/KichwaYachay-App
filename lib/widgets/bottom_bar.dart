@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_icons/flutter_icons.dart';
+// import 'package:flutter_icons/flutter_icons.dart';
 import 'package:language_learning_ui/constants.dart';
 
 class BottomBar extends StatelessWidget {
@@ -20,24 +20,24 @@ class BottomBar extends StatelessWidget {
       items: const [
         BottomNavigationBarItem(
           label: "",
-          icon: Icon(FlutterIcons.home_fea),
+          icon: Icon(Icons.home),
         ),
         BottomNavigationBarItem(
           label: "",
           icon: Icon(
-            FlutterIcons.calendar_fea,
+            Icons.calendar_month,
           ),
         ),
         BottomNavigationBarItem(
           label: "",
           icon: Icon(
-            FlutterIcons.edit_fea,
+            Icons.edit,
           ),
         ),
         BottomNavigationBarItem(
           label: "",
           icon: Icon(
-            FlutterIcons.user_fea,
+            Icons.supervised_user_circle,
           ),
         ),
       ],

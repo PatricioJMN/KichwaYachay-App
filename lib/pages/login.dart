@@ -45,9 +45,9 @@ class _LoginState extends State<Login> {
                 const SizedBox(
                   height: 40.0,
                 ),
-                Form(
+                const Form(
                   child: Column(
-                    children: const [
+                    children: [
                       BorderTextField(hintText: "Email"),
                       SizedBox(
                         height: 15.0,

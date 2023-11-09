@@ -4,7 +4,7 @@ import 'package:language_learning_ui/pages/quiz_screen.dart';
 import 'package:language_learning_ui/pages/review_quiz_page.dart';
 
 class QuizHomePage extends StatelessWidget {
-  final String unity;
+  final int unity;
   final String lesson;
   const QuizHomePage({Key? key, required this.unity, required this.lesson})
       : super(key: key);

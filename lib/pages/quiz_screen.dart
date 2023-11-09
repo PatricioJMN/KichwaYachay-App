@@ -7,7 +7,7 @@ import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/pages/results_page.dart';
 
 class QuizScreen extends StatefulWidget {
-  final String unity;
+  final int unity;
   final String lesson;
 
   const QuizScreen({Key? key, required this.unity, required this.lesson})

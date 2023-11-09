@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_icons/flutter_icons.dart';
+// import 'package:flutter_icons/flutter_icons.dart';
 import 'package:language_learning_ui/constants.dart';
 
 class UserMenuBar extends StatelessWidget {
@@ -42,7 +42,7 @@ class UserMenuBar extends StatelessWidget {
         const Spacer(),
         IconButton(
           icon: const Icon(
-            FlutterIcons.bell_fea,
+            Icons.notifications,
             color: Constants.primaryTextColor,
           ),
           onPressed: () {},

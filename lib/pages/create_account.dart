@@ -45,9 +45,9 @@ class _CreateAccountState extends State<CreateAccount> {
                 const SizedBox(
                   height: 40.0,
                 ),
-                Form(
+                const Form(
                   child: Column(
-                    children: const [
+                    children: [
                       BorderTextField(hintText: "Nombre"),
                       SizedBox(
                         height: 15.0,

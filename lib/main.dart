@@ -5,6 +5,7 @@ import 'package:language_learning_ui/pages/create_account.dart';
 import 'package:language_learning_ui/pages/dashboard.dart';
 import 'package:language_learning_ui/pages/home.dart';
 import 'package:language_learning_ui/pages/lesson_screen.dart';
+// import 'package:language_learning_ui/constants.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -55,7 +56,7 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
       });
     case "/lesson-screen":
       return MaterialPageRoute(builder: (BuildContext context) {
-        return const LessonScreen();
+        return const LessonScreen(unity: 1);
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {

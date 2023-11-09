@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_icons/flutter_icons.dart';
+// import 'package:flutter_icons/flutter_icons.dart';
+// import 'package:flutter_launcher_icons/android.dart';
+// import 'package:flutter_launcher_icons/flutter_launcher_icons_config.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/widgets/border_text_field.dart';
 import 'package:language_learning_ui/widgets/course_card.dart';
+// import 'package:language_learning_ui/widgets/lesson_card.dart';
 import 'package:language_learning_ui/widgets/instructor_card.dart';
 import 'package:language_learning_ui/widgets/topics_list.dart';
 import 'package:language_learning_ui/widgets/user_menu_bar.dart';
@@ -33,24 +36,24 @@ class _DashboardState extends State<Dashboard> {
         items: const [
           BottomNavigationBarItem(
             label: "",
-            icon: Icon(FlutterIcons.home_fea),
+            icon: Icon(Icons.home),
           ),
           BottomNavigationBarItem(
             label: "",
             icon: Icon(
-              FlutterIcons.calendar_fea,
+              Icons.calendar_month,
             ),
           ),
           BottomNavigationBarItem(
             label: "",
             icon: Icon(
-              FlutterIcons.edit_fea,
+              Icons.edit,
             ),
           ),
           BottomNavigationBarItem(
             label: "",
             icon: Icon(
-              FlutterIcons.user_fea,
+              Icons.supervised_user_circle,
             ),
           ),
         ],
@@ -72,7 +75,7 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 const BorderTextField(
                   prefixIcon: Icon(
-                    FlutterIcons.search_fea,
+                    Icons.search,
                     color: Colors.grey,
                   ),
                   borderRadius: 50.0,
@@ -82,11 +85,68 @@ class _DashboardState extends State<Dashboard> {
                   height: 30.0,
                 ),
                 // RETURNS UNITY LIST
-                const TopicsList(),
-                const SizedBox(height: 30.0),
-                Row(
+                // Nivel Principiante
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
+                    Text(
+                      "Principiante",
+                      style: TextStyle(
+                        fontSize: 21.0,
+                        color: Constants.primaryTextColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+                // ListView.builder(
+                //   itemCount: Constants.lessons.length,
+                //   itemBuilder: (context, index) {
+                //     final lesson = Constants.lessons[index];
+                //     return LessonCard(lesson: lesson, unity: 1);
+                //   },
+                // ),
+                TopicsList(
+                    topics: Constants.topicsPrincipiante,
+                    lesson: Constants.lessons),
+                // Nivel Intermedio
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Intermedio",
+                      style: TextStyle(
+                        fontSize: 21.0,
+                        color: Constants.primaryTextColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+                TopicsList(
+                    topics: Constants.topicsIntermedio,
+                    lesson: Constants.lessons),
+                // Nivel Avanzado
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Avanzado",
+                      style: TextStyle(
+                        fontSize: 21.0,
+                        color: Constants.primaryTextColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+                TopicsList(
+                    topics: Constants.topicsAvanzado,
+                    lesson: Constants.lessons),
+                const SizedBox(height: 30.0),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
                     Text(
                       "Actividades",
                       style: TextStyle(
@@ -107,6 +167,7 @@ class _DashboardState extends State<Dashboard> {
                 const SizedBox(
                   height: 12.0,
                 ),
+                // Actividades
                 SizedBox(
                   height: 22.0,
                   child: ListView.separated(
@@ -131,6 +192,9 @@ class _DashboardState extends State<Dashboard> {
                       );
                     },
                   ),
+                ),
+                const SizedBox(
+                  height: 12.0,
                 ),
                 const SizedBox(height: 20.0),
                 SizedBox(

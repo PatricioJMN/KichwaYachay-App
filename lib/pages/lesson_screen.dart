@@ -1,47 +1,33 @@
+// ignore_for_file: no_logic_in_create_state
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
-import 'package:language_learning_ui/models/lesson_model.dart';
+// import 'package:language_learning_ui/models/lesson_model.dart';
+// import 'package:language_learning_ui/models/unity_model.dart';
 // ignore: unused_import
 import 'package:language_learning_ui/pages/quiz_home_page.dart';
 // ignore: unused_import
 import 'package:language_learning_ui/pages/quiz_screen.dart';
 import 'package:language_learning_ui/widgets/bottom_bar.dart';
-import 'package:language_learning_ui/widgets/lesson_card.dart';
 import 'package:language_learning_ui/widgets/user_menu_bar.dart';
+import 'package:language_learning_ui/widgets/lesson_card.dart';
+// import 'package:language_learning_ui/MODELS/lesson_model.dart';
 
 class LessonScreen extends StatefulWidget {
-  const LessonScreen({Key? key}) : super(key: key);
+  final int unity;
+  // final LessonModel lesson;
+  const LessonScreen({Key? key, required this.unity}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _LessonScreenState createState() => _LessonScreenState();
+  _LessonScreenState createState() => _LessonScreenState(unity: unity);
 }
 
 class _LessonScreenState extends State<LessonScreen> {
-  List<LessonModel> lessons = [
-    LessonModel(
-      unityIndex: "1",
-      lessonIndex: "1",
-      imagePath: "assets/images/lesson.png",
-      title: "Lección 01",
-      duration: "25 minutos",
-    ),
-    LessonModel(
-      unityIndex: "1",
-      lessonIndex: "2",
-      imagePath: "assets/images/lesson.png",
-      title: "Lección 02",
-      duration: "13 minutos",
-    ),
-    LessonModel(
-      unityIndex: "1",
-      lessonIndex: "3",
-      imagePath: "assets/images/lesson.png",
-      title: "Lección 03",
-      duration: "15 minutos",
-    ),
-  ];
+  final int unity;
+  // final LessonModel lesson;
+  _LessonScreenState({required this.unity});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,7 +82,7 @@ class _LessonScreenState extends State<LessonScreen> {
                                     ),
                                     child: Center(
                                       child: Text(
-                                        Constants.topics[0].points,
+                                        Constants.topicsPrincipiante[0].points,
                                         style: const TextStyle(
                                           color: Constants.primaryTextColor,
                                           fontWeight: FontWeight.w600,
@@ -108,7 +94,7 @@ class _LessonScreenState extends State<LessonScreen> {
                                     width: 10.0,
                                   ),
                                   Text(
-                                    Constants.topics[0].points,
+                                    Constants.topicsPrincipiante[0].points,
                                     style: const TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w600,
@@ -118,7 +104,7 @@ class _LessonScreenState extends State<LessonScreen> {
                                 ],
                               ),
                               Text(
-                                Constants.topics[0].topic,
+                                Constants.topicsPrincipiante[0].topic,
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600,
@@ -126,7 +112,7 @@ class _LessonScreenState extends State<LessonScreen> {
                                 ),
                               ),
                               Text(
-                                Constants.topics[0].time,
+                                Constants.topicsPrincipiante[0].time,
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 20.0,
@@ -154,9 +140,9 @@ class _LessonScreenState extends State<LessonScreen> {
                 const SizedBox(
                   height: 30.0,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Text(
                       "Mis lecciones",
                       style: TextStyle(
@@ -182,167 +168,19 @@ class _LessonScreenState extends State<LessonScreen> {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (BuildContext context, int index) {
-                      return LessonCard(lesson: lessons[index]);
+                      final lesson = Constants.lessons[index];
+                      if (lesson.unityIndex == unity) {
+                        return LessonCard(
+                          lesson: lesson,
+                          unity: unity,
+                        );
+                      } else {
+                        return Container();
+                      }
                     },
-                    itemCount: lessons.length,
+                    itemCount: Constants.lessons.length,
                   ),
                 ])
-
-                // ------------------------- QUICES
-                // SizedBox(
-                //   width: 362.8,
-                //   height: 305.7,
-                //   child: SingleChildScrollView(
-                //     child: Column(
-                //       mainAxisSize: MainAxisSize.min,
-                //       mainAxisAlignment: MainAxisAlignment.start,
-                //       crossAxisAlignment: CrossAxisAlignment.center,
-                //       children: [
-                //         Row(
-                //           mainAxisSize: MainAxisSize.min,
-                //           mainAxisAlignment: MainAxisAlignment.center,
-                //           children: [
-                //             Padding(
-                //               padding: const EdgeInsetsDirectional.fromSTEB(
-                //                   0, 0, 5, 0),
-                //               child: Image.asset(
-                //                 'assets/images/lesson.png',
-                //                 width: 70.3,
-                //                 height: 66.4,
-                //                 fit: BoxFit.cover,
-                //               ),
-                //             ),
-                //             Column(
-                //               mainAxisSize: MainAxisSize.max,
-                //               children: const [
-                //                 Align(
-                //                   alignment: AlignmentDirectional(0, 0),
-                //                   child: Text('Lección 1',
-                //                       style: TextStyle(
-                //                           color: Constants.primaryTextColor)),
-                //                 ),
-                //                 Text('Duración: 5 minutos',
-                //                     style: TextStyle(
-                //                         color: Constants.primaryColor)),
-                //               ],
-                //             ),
-                //             Align(
-                //               alignment: const AlignmentDirectional(0, 0),
-                //               child: Padding(
-                //                   padding: const EdgeInsetsDirectional.fromSTEB(
-                //                       30, 0, 0, 0),
-                //                   child: ElevatedButton(
-                //                     onPressed: () {
-                //                       Navigator.push(
-                //                           context,
-                //                           MaterialPageRoute(
-                //                               builder: (context) =>
-                //                                   const HomePage()));
-                //                     },
-                //                     child: const Text('Quiz'),
-                //                   )),
-                //             ),
-                //           ],
-                //         ),
-                //         const SizedBox(
-                //           height: 10,
-                //         ),
-                //         Row(
-                //           mainAxisSize: MainAxisSize.min,
-                //           mainAxisAlignment: MainAxisAlignment.center,
-                //           children: [
-                //             Padding(
-                //               padding: const EdgeInsetsDirectional.fromSTEB(
-                //                   0, 0, 5, 0),
-                //               child: Image.asset(
-                //                 'assets/images/lesson.png',
-                //                 width: 70.3,
-                //                 height: 66.4,
-                //                 fit: BoxFit.cover,
-                //               ),
-                //             ),
-                //             Column(
-                //               mainAxisSize: MainAxisSize.max,
-                //               children: const [
-                //                 Align(
-                //                   alignment: AlignmentDirectional(0, 0),
-                //                   child: Text('Lección 2',
-                //                       style: TextStyle(
-                //                           color: Constants.primaryTextColor)),
-                //                 ),
-                //                 Text('Duración: 5 minutos',
-                //                     style: TextStyle(
-                //                         color: Constants.primaryColor)),
-                //               ],
-                //             ),
-                //             Padding(
-                //                 padding: const EdgeInsetsDirectional.fromSTEB(
-                //                     30, 0, 0, 0),
-                //                 child: ElevatedButton(
-                //                   onPressed: () {
-                //                     Navigator.push(
-                //                         context,
-                //                         MaterialPageRoute(
-                //                             builder: (context) =>
-                //                                 const HomePage()));
-                //                   },
-                //                   child: const Text('Quiz'),
-                //                 )),
-                //           ],
-                //         ),
-                //         const SizedBox(
-                //           height: 10,
-                //         ),
-                //         Row(
-                //           mainAxisSize: MainAxisSize.min,
-                //           mainAxisAlignment: MainAxisAlignment.center,
-                //           children: [
-                //             Padding(
-                //               padding: const EdgeInsetsDirectional.fromSTEB(
-                //                   0, 0, 5, 0),
-                //               child: Image.asset(
-                //                 'assets/images/lesson.png',
-                //                 height: 66.4,
-                //                 fit: BoxFit.cover,
-                //               ),
-                //             ),
-                //             Column(
-                //               mainAxisSize: MainAxisSize.max,
-                //               children: const [
-                //                 Align(
-                //                   alignment: AlignmentDirectional(0, 0),
-                //                   child: Text('Lección 3',
-                //                       style: TextStyle(
-                //                           color: Constants.primaryTextColor)),
-                //                 ),
-                //                 Text('Duración: 5 minutos',
-                //                     textAlign: TextAlign.center,
-                //                     style: TextStyle(
-                //                         color: Constants.primaryColor)),
-                //               ],
-                //             ),
-                //             Padding(
-                //                 padding: const EdgeInsetsDirectional.fromSTEB(
-                //                     30, 0, 0, 0),
-                //                 child: ElevatedButton(
-                //                   onPressed: () {
-                //                     Navigator.push(
-                //                         context,
-                //                         MaterialPageRoute(
-                //                             builder: (context) =>
-                //                                 const HomePage()));
-                //                   },
-                //                   child: const Text('Quiz'),
-                //                 )),
-                //           ],
-                //         ),
-                //         const SizedBox(
-                //           height: 10,
-                //         ),
-                //       ],
-                //     ),
-                //   ),
-                // ),
               ],
             ),
           ),
