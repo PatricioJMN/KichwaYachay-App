@@ -9,7 +9,7 @@ class ResultsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constants.yellowaguitaKY,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(quiz.name),
         backgroundColor: Constants.redKY,

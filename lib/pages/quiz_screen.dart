@@ -18,7 +18,7 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  int totalQuestions = 6;
+  int totalQuestions = 3;
   int totalOptions = 3;
   int questionIndex = 0;
   int progressIndex = 0;
@@ -27,7 +27,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   Future<void> readJson() async {
     final String response = await rootBundle.loadString(
-        'assets/unity_${widget.unity}_lesson_${widget.lesson}.json');
+        'assets/database/unity_${widget.unity}_lesson_${widget.lesson}.json');
     final List<dynamic> data = await json.decode(response);
     List<int> optionList = List<int>.generate(data.length, (i) => i);
     List<int> questionsAdded = [];
@@ -129,7 +129,7 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constants.redtortaKY,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(quiz.name),
         backgroundColor: Constants.redKY,
@@ -156,17 +156,17 @@ class _QuizScreenState extends State<QuizScreen> {
               margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
               child: quiz.questions.isNotEmpty
                   ? Card(
-                      color: Constants.redtortaKY,
+                      color: const Color.fromARGB(255, 255, 255, 255),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Container(
-                            color: Constants.redtortaKY,
+                            color: Colors.white,
                             margin: const EdgeInsets.all(15),
                             child: Text(
                                 '${quiz.questions[questionIndex].question}\n${quiz.questions[questionIndex].questionK}',
                                 style: const TextStyle(
-                                  fontSize: 15.0,
+                                  fontSize: 20.0,
                                   color: Colors.black,
                                 )),
                           ),
@@ -176,35 +176,28 @@ class _QuizScreenState extends State<QuizScreen> {
                               itemCount: totalOptions,
                               itemBuilder: (_, index) {
                                 return Container(
-                                  margin: const EdgeInsets.all(3),
+                                  // height: 50,
+                                  margin: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
-                                    gradient: const LinearGradient(colors: [
-                                      Constants.yellowaguitaKY,
-                                      Constants.yellowaguitaKY
-                                    ]),
+                                    color: Constants.orangeLisKY,
                                     border: Border.all(
-                                        color: Constants.greenKY, width: 2),
-                                    borderRadius: BorderRadius.circular(15),
+                                        color: Constants.orangeLisKY, width: 0),
+                                    borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: ListTile(
                                     shape: const RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
-                                        Radius.circular(15),
+                                        Radius.circular(5),
                                       ),
                                     ),
-                                    leading: Text('${index + 1}',
-                                        textAlign: TextAlign.center,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyLarge),
                                     title: Center(
                                         child: Text(
                                             quiz.questions[questionIndex]
                                                 .options[index],
                                             textAlign: TextAlign.center,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .bodyLarge)),
+                                            style:
+                                                const TextStyle(fontSize: 15))),
+                                    // IMAGE AFTER THE OPTION
                                     subtitle: Image.asset(
                                       'assets/images/unity_${widget.unity}/lesson_${widget.lesson}/${quiz.questions[questionIndex].options[index]}.png',
                                       width: 75,
@@ -233,8 +226,8 @@ class _QuizScreenState extends State<QuizScreen> {
             onPressed: () {
               _optionSelected('Skipped');
             },
-            child:
-                const Text('Omitir', style: TextStyle(color: Constants.redKY)),
+            child: const Text('Omitir',
+                style: TextStyle(color: Constants.redKY, fontSize: 15)),
           ),
         ],
       ),

@@ -12,7 +12,7 @@ class QuizHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constants.yellowKY,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Constants.redKY,
@@ -21,7 +21,7 @@ class QuizHomePage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-                margin: const EdgeInsets.only(top: 30, bottom: 50),
+                margin: const EdgeInsets.only(top: 60, bottom: 40),
                 child: Image.asset("assets/images/logo_kichwa_yachay.png")
                 // const Icon(Icons.wb_sunny_outlined,
                 //     size: 100,
@@ -39,21 +39,20 @@ class QuizHomePage extends StatelessWidget {
                 children: [
                   Container(
                     height: 50,
-                    margin: const EdgeInsets.only(top: 10, bottom: 25),
+                    margin: const EdgeInsets.only(
+                        top: 10, bottom: 25, left: 30, right: 30),
                     decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black),
-                        gradient: const LinearGradient(
-                            begin: Alignment.topRight,
-                            end: Alignment.bottomLeft,
-                            colors: [Constants.orangeKY, Constants.yellowKY]),
+                        border: Border.all(color: Constants.redKY),
+                        color: Constants.redKY,
                         borderRadius: BorderRadius.circular(5)),
                     child: Center(
                       child: Text(
-                        'Lección $lesson',
+                        'LECCIÓN $lesson',
                         style: const TextStyle(
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.bold,
                             fontSize: 20,
-                            color: Colors.black),
+                            color: Constants.grayKY,
+                            fontFamily: 'Roboto-Regular.ttf'),
                       ),
                     ),
                   ),
@@ -68,10 +67,13 @@ class QuizHomePage extends StatelessWidget {
                                   )));
                     },
                     style: OutlinedButton.styleFrom(
-                      foregroundColor: Colors.black,
-                      backgroundColor: Constants.greenKY,
-                      elevation: 4,
-                      side: const BorderSide(width: 1),
+                      foregroundColor: Constants.orangeLisKY,
+                      backgroundColor: Constants.orangeLisKY,
+                      disabledBackgroundColor: Constants.orangeLisKY,
+                      disabledForegroundColor: Constants.orangeLisKY,
+                      elevation: 5,
+                      side: const BorderSide(
+                          width: 1, color: Constants.orangeLisKY),
                     ),
                     child: const Text(
                       'Iniciar Quiz',
@@ -89,10 +91,13 @@ class QuizHomePage extends StatelessWidget {
                                   )));
                     },
                     style: OutlinedButton.styleFrom(
-                      foregroundColor: Colors.black,
-                      backgroundColor: Constants.greenKY,
-                      elevation: 4,
-                      side: const BorderSide(width: 1),
+                      foregroundColor: Constants.orangeLisKY,
+                      backgroundColor: Constants.orangeLisKY,
+                      disabledBackgroundColor: Constants.orangeLisKY,
+                      disabledForegroundColor: Constants.orangeLisKY,
+                      elevation: 5,
+                      side: const BorderSide(
+                          width: 1, color: Constants.orangeLisKY),
                     ),
                     child: const Text(
                       'Repasar Quiz',

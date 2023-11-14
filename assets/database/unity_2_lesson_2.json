@@ -1,0 +1,23 @@
+[
+  {
+    "question": "¿Cuál de los siguientes es agua?",
+	"questionK": "Maykanta yaku kan",
+    "traduccion": "Yaku",
+	"audioPath": "",
+	"imagePath": "Yaku"
+  },
+  {
+    "question": "¿Cuál de los siguientes es queso",
+	"questionK": "Maykanta makinchu kan?",
+    "traduccion": "Makinchu",
+	"audioPath": "",
+	"imagePath": "Makinchu"
+  },
+  {
+    "question": "¿Cuál de los siguientes es carne?",
+	"questionK": "Maykanta aycha kan",
+    "traduccion": "Aycha",
+	"audioPath": "",
+	"imagePath": "Aycha"
+  }
+]

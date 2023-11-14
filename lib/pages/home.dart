@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 32.0),
               child: Text(
-                "\nBienvenido/a a",
+                "\nBienvenido/a",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 28.0,
@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
               height: 15.0,
             ),
             const Text(
-              "Eslogan Aquí",
+              "",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 15.0,
@@ -80,7 +80,7 @@ class Home extends StatelessWidget {
                   child: Text(
                     "Ingresar",
                     style: GoogleFonts.roboto(
-                      color: const Color.fromRGBO(169, 176, 185, 1.0),
+                      color: Constants.redKY,
                       fontSize: 18.0,
                       fontWeight: FontWeight.w600,
                     ),
@@ -106,37 +106,37 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 30.0,
             ),
-            Wrap(
-              // mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 50,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image:
-                            AssetImage("assets/images/logo_yachay_tech.png")),
-                  ),
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 50,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image:
-                            AssetImage("assets/images/logo_dep_language.png")),
-                  ),
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 50,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assets/images/logo_dep_tics.png")),
-                  ),
-                ),
-              ],
-            )
+            // Wrap(
+            //   // mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //   children: <Widget>[
+            //     Container(
+            //       width: MediaQuery.of(context).size.width,
+            //       height: 50,
+            //       decoration: const BoxDecoration(
+            //         image: DecorationImage(
+            //             image:
+            //                 AssetImage("assets/images/logo_yachay_tech.png")),
+            //       ),
+            //     ),
+            //     Container(
+            //       width: MediaQuery.of(context).size.width,
+            //       height: 50,
+            //       decoration: const BoxDecoration(
+            //         image: DecorationImage(
+            //             image:
+            //                 AssetImage("assets/images/logo_dep_language.png")),
+            //       ),
+            //     ),
+            //     Container(
+            //       width: MediaQuery.of(context).size.width,
+            //       height: 50,
+            //       decoration: const BoxDecoration(
+            //         image: DecorationImage(
+            //             image: AssetImage("assets/images/logo_dep_tics.png")),
+            //       ),
+            //     ),
+            //   ],
+            // )
           ]),
         ),
       ),

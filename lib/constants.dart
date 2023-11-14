@@ -12,7 +12,9 @@ class Constants {
   static const Color captionTextColor = Color.fromRGBO(231, 106, 38, 1.0);
   static const Color primaryColor = Color.fromRGBO(114, 25, 48, 1.0);
 
-  static const Color orangeKY = Color.fromRGBO(231, 106, 38, 1.0);
+  static const Color orangeLisKY = Color.fromARGB(223, 236, 119, 51);
+  static const Color yellowMustard = Color.fromARGB(255, 202, 156, 56);
+  static const Color orangeKY = Color.fromRGBO(238, 149, 102, 1);
   static const Color redKY = Color.fromRGBO(114, 25, 48, 1.0);
   static const Color redtortaKY = Color.fromRGBO(242, 138, 144, 1.0);
   static const Color greenKY = Color.fromRGBO(55, 75, 53, 1.0);
@@ -26,7 +28,7 @@ class Constants {
 // Lista de Cursos: Principiante
   static List<TopicModel> topicsPrincipiante = [
     TopicModel(
-      color: Constants.blueKY,
+      color: Constants.redKY,
       boxShadow: [
         const BoxShadow(
           color: Constants.blueKY,
@@ -36,31 +38,31 @@ class Constants {
         ),
       ],
       topic: "Unidad 1",
-      time: "Contiene 3 Lecciones",
-      points: "20",
+      time: "3 Lecciones",
+      points: "15",
       image: "assets/images/course-1.png",
       unity: 1,
       lesson: const LessonScreen(unity: 1),
     ),
     TopicModel(
-      color: Constants.redtortaKY,
+      color: Constants.greenKY,
       boxShadow: [
         const BoxShadow(
-          color: Color.fromRGBO(255, 99, 128, 0.6),
+          color: redKY,
           spreadRadius: 0,
           blurRadius: 6,
           offset: Offset(0, 2), // changes position of shadow
         ),
       ],
       topic: "Unidad 2",
-      time: "Contiene n Lecciones",
-      points: "20",
+      time: "3 Lecciones",
+      points: "15",
       image: "assets/images/course-2.png",
       unity: 2,
       lesson: const LessonScreen(unity: 2),
     ),
     TopicModel(
-      color: Constants.yellowaguitaKY,
+      color: Constants.yellowMustard,
       boxShadow: [
         const BoxShadow(
           color: Color.fromRGBO(255, 99, 128, 0.6),
@@ -70,157 +72,181 @@ class Constants {
         ),
       ],
       topic: "Unidad 3",
-      time: "Contiene n Lecciones",
-      points: "20",
+      time: "2 Lecciones",
+      points: "10",
       image: "assets/images/course-3.png",
       unity: 3,
       lesson: const LessonScreen(unity: 3),
     ),
   ];
 // Lista de Cursos: Intermedio
-  static List<TopicModel> topicsIntermedio = [
-    TopicModel(
-      color: Constants.blueKY,
-      boxShadow: [
-        const BoxShadow(
-          color: Constants.blueKY,
-          spreadRadius: 0,
-          blurRadius: 6,
-          offset: Offset(0, 2), // changes position of shadow
-        ),
-      ],
-      topic: "Unidad 4",
-      time: "Contiene 3 Lecciones",
-      points: "20",
-      image: "assets/images/course-1.png",
-      unity: 4,
-      lesson: const LessonScreen(unity: 4),
-    ),
-    TopicModel(
-      color: Constants.redtortaKY,
-      boxShadow: [
-        const BoxShadow(
-          color: Color.fromRGBO(255, 99, 128, 0.6),
-          spreadRadius: 0,
-          blurRadius: 6,
-          offset: Offset(0, 2), // changes position of shadow
-        ),
-      ],
-      topic: "Unidad 5",
-      time: "Contiene n Lecciones",
-      points: "20",
-      image: "assets/images/course-2.png",
-      unity: 5,
-      lesson: const LessonScreen(unity: 5),
-    ),
-    TopicModel(
-      color: Constants.yellowaguitaKY,
-      boxShadow: [
-        const BoxShadow(
-          color: Color.fromRGBO(255, 99, 128, 0.6),
-          spreadRadius: 0,
-          blurRadius: 6,
-          offset: Offset(0, 2), // changes position of shadow
-        ),
-      ],
-      topic: "Unidad 6",
-      time: "Contiene n Lecciones",
-      points: "20",
-      image: "assets/images/course-3.png",
-      unity: 6,
-      lesson: const LessonScreen(unity: 6),
-    ),
-  ];
+  // static List<TopicModel> topicsIntermedio = [
+  //   TopicModel(
+  //     color: Constants.blueKY,
+  //     boxShadow: [
+  //       const BoxShadow(
+  //         color: Constants.blueKY,
+  //         spreadRadius: 0,
+  //         blurRadius: 6,
+  //         offset: Offset(0, 2), // changes position of shadow
+  //       ),
+  //     ],
+  //     topic: "Unidad 4",
+  //     time: "3 Lecciones",
+  //     points: "20",
+  //     image: "assets/images/course-1.png",
+  //     unity: 4,
+  //     lesson: const LessonScreen(unity: 4),
+  //   ),
+  //   TopicModel(
+  //     color: Constants.redtortaKY,
+  //     boxShadow: [
+  //       const BoxShadow(
+  //         color: Color.fromRGBO(255, 99, 128, 0.6),
+  //         spreadRadius: 0,
+  //         blurRadius: 6,
+  //         offset: Offset(0, 2), // changes position of shadow
+  //       ),
+  //     ],
+  //     topic: "Unidad 5",
+  //     time: "n Lecciones",
+  //     points: "20",
+  //     image: "assets/images/course-2.png",
+  //     unity: 5,
+  //     lesson: const LessonScreen(unity: 5),
+  //   ),
+  //   TopicModel(
+  //     color: Constants.yellowaguitaKY,
+  //     boxShadow: [
+  //       const BoxShadow(
+  //         color: Color.fromRGBO(255, 99, 128, 0.6),
+  //         spreadRadius: 0,
+  //         blurRadius: 6,
+  //         offset: Offset(0, 2), // changes position of shadow
+  //       ),
+  //     ],
+  //     topic: "Unidad 6",
+  //     time: "n Lecciones",
+  //     points: "20",
+  //     image: "assets/images/course-3.png",
+  //     unity: 6,
+  //     lesson: const LessonScreen(unity: 6),
+  //   ),
+  // ];
 // Lista de Cursos: Principiante
-  static List<TopicModel> topicsAvanzado = [
-    TopicModel(
-      color: Constants.blueKY,
-      boxShadow: [
-        const BoxShadow(
-          color: Constants.blueKY,
-          spreadRadius: 0,
-          blurRadius: 6,
-          offset: Offset(0, 2), // changes position of shadow
-        ),
-      ],
-      topic: "Unidad 7",
-      time: "Contiene 3 Lecciones",
-      points: "20",
-      image: "assets/images/course-1.png",
-      unity: 7,
-      lesson: const LessonScreen(unity: 7),
-    ),
-    TopicModel(
-      color: Constants.redtortaKY,
-      boxShadow: [
-        const BoxShadow(
-          color: Color.fromRGBO(255, 99, 128, 0.6),
-          spreadRadius: 0,
-          blurRadius: 6,
-          offset: Offset(0, 2), // changes position of shadow
-        ),
-      ],
-      topic: "Unidad 8",
-      time: "Contiene n Lecciones",
-      points: "20",
-      image: "assets/images/course-2.png",
-      unity: 8,
-      lesson: const LessonScreen(unity: 8),
-    ),
-    TopicModel(
-      color: Constants.yellowaguitaKY,
-      boxShadow: [
-        const BoxShadow(
-          color: Color.fromRGBO(255, 99, 128, 0.6),
-          spreadRadius: 0,
-          blurRadius: 6,
-          offset: Offset(0, 2), // changes position of shadow
-        ),
-      ],
-      topic: "Unidad 9",
-      time: "Contiene n Lecciones",
-      points: "20",
-      image: "assets/images/course-3.png",
-      unity: 9,
-      lesson: const LessonScreen(unity: 9),
-    ),
-  ];
+  // static List<TopicModel> topicsAvanzado = [
+  //   TopicModel(
+  //     color: Constants.blueKY,
+  //     boxShadow: [
+  //       const BoxShadow(
+  //         color: Constants.blueKY,
+  //         spreadRadius: 0,
+  //         blurRadius: 6,
+  //         offset: Offset(0, 2), // changes position of shadow
+  //       ),
+  //     ],
+  //     topic: "Unidad 7",
+  //     time: "Contiene 3 Lecciones",
+  //     points: "20",
+  //     image: "assets/images/course-1.png",
+  //     unity: 7,
+  //     lesson: const LessonScreen(unity: 7),
+  //   ),
+  //   TopicModel(
+  //     color: Constants.redtortaKY,
+  //     boxShadow: [
+  //       const BoxShadow(
+  //         color: Color.fromRGBO(255, 99, 128, 0.6),
+  //         spreadRadius: 0,
+  //         blurRadius: 6,
+  //         offset: Offset(0, 2), // changes position of shadow
+  //       ),
+  //     ],
+  //     topic: "Unidad 8",
+  //     time: "Contiene n Lecciones",
+  //     points: "20",
+  //     image: "assets/images/course-2.png",
+  //     unity: 8,
+  //     lesson: const LessonScreen(unity: 8),
+  //   ),
+  //   TopicModel(
+  //     color: Constants.yellowaguitaKY,
+  //     boxShadow: [
+  //       const BoxShadow(
+  //         color: Color.fromRGBO(255, 99, 128, 0.6),
+  //         spreadRadius: 0,
+  //         blurRadius: 6,
+  //         offset: Offset(0, 2), // changes position of shadow
+  //       ),
+  //     ],
+  //     topic: "Unidad 9",
+  //     time: "Contiene n Lecciones",
+  //     points: "20",
+  //     image: "assets/images/course-3.png",
+  //     unity: 9,
+  //     lesson: const LessonScreen(unity: 9),
+  //   ),
+  // ];
 // Lista de Lecciones
   static List<LessonModel> lessons = [
+    // UNITY 1
     LessonModel(
       unityIndex: 1,
       lessonIndex: "1",
       imagePath: "assets/images/lesson.png",
       title: "Lección 01",
-      duration: "25 minutos",
+      duration: "5 minutos",
     ),
     LessonModel(
       unityIndex: 1,
       lessonIndex: "2",
       imagePath: "assets/images/lesson.png",
       title: "Lección 02",
-      duration: "13 minutos",
+      duration: "5 minutos",
     ),
     LessonModel(
       unityIndex: 1,
       lessonIndex: "3",
       imagePath: "assets/images/lesson.png",
       title: "Lección 03",
-      duration: "15 minutos",
+      duration: "5 minutos",
     ),
+    // UNITY 2
     LessonModel(
       unityIndex: 2,
       lessonIndex: "1",
       imagePath: "assets/images/lesson.png",
       title: "Lección 01",
-      duration: "15 minutos",
+      duration: "5 minutos",
     ),
     LessonModel(
       unityIndex: 2,
       lessonIndex: "2",
       imagePath: "assets/images/lesson.png",
       title: "Lección 02",
-      duration: "15 minutos",
+      duration: "5 minutos",
+    ),
+    LessonModel(
+      unityIndex: 2,
+      lessonIndex: "3",
+      imagePath: "assets/images/lesson.png",
+      title: "Lección 03",
+      duration: "5 minutos",
+    ),
+    // UNITY 3
+    LessonModel(
+      unityIndex: 3,
+      lessonIndex: "1",
+      imagePath: "assets/images/lesson.png",
+      title: "Lección 01",
+      duration: "5 minutos",
+    ),
+    LessonModel(
+      unityIndex: 3,
+      lessonIndex: "2",
+      imagePath: "assets/images/lesson.png",
+      title: "Lección 03",
+      duration: "5 minutos",
     ),
   ];
 // Lista de Minijuegos

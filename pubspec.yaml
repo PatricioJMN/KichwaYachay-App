@@ -55,15 +55,25 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    # Images
     - assets/images/unity_1/lesson_1/
     - assets/images/unity_1/lesson_2/
     - assets/images/unity_1/lesson_3/
     - assets/images/
     - assets/svg/
+    # Database Values
     - assets/database/
-    - assets/unity_1_lesson_1.json
-    - assets/unity_1_lesson_2.json
-    - assets/unity_1_lesson_3.json
+          # Unity 1
+    - assets/database/unity_1_lesson_1.json
+    - assets/database/unity_1_lesson_2.json
+    - assets/database/unity_1_lesson_3.json
+          # Unity 2
+    - assets/database/unity_2_lesson_1.json
+    - assets/database/unity_2_lesson_2.json
+    - assets/database/unity_2_lesson_3.json
+          # Unity 3
+    - assets/database/unity_3_lesson_1.json
+    - assets/database/unity_3_lesson_2.json
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -77,7 +87,8 @@ flutter:
   fonts:
     - family: Kichwa
       fonts:
-        - asset: fonts/newbold.ttf
+        - asset: fonts/Roboto-Light.ttf
+        - asset: fonts/Roboto-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

@@ -1,14 +1,13 @@
-import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
 // import 'package:flutter_icons/flutter_icons.dart';
 // import 'package:flutter_launcher_icons/android.dart';
 // import 'package:flutter_launcher_icons/flutter_launcher_icons_config.dart';
+// import 'package:language_learning_ui/widgets/lesson_card.dart';
+// import 'package:language_learning_ui/widgets/instructor_card.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/widgets/border_text_field.dart';
 import 'package:language_learning_ui/widgets/course_card.dart';
-// import 'package:language_learning_ui/widgets/lesson_card.dart';
-import 'package:language_learning_ui/widgets/instructor_card.dart';
 import 'package:language_learning_ui/widgets/topics_list.dart';
 import 'package:language_learning_ui/widgets/user_menu_bar.dart';
 
@@ -44,12 +43,12 @@ class _DashboardState extends State<Dashboard> {
               Icons.calendar_month,
             ),
           ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: Icon(
-              Icons.edit,
-            ),
-          ),
+          // BottomNavigationBarItem(
+          //   label: "",
+          //   icon: Icon(
+          //     Icons.edit,
+          //   ),
+          // ),
           BottomNavigationBarItem(
             label: "",
             icon: Icon(
@@ -99,50 +98,46 @@ class _DashboardState extends State<Dashboard> {
                     ),
                   ],
                 ),
-                // ListView.builder(
-                //   itemCount: Constants.lessons.length,
-                //   itemBuilder: (context, index) {
-                //     final lesson = Constants.lessons[index];
-                //     return LessonCard(lesson: lesson, unity: 1);
-                //   },
-                // ),
                 TopicsList(
                     topics: Constants.topicsPrincipiante,
                     lesson: Constants.lessons),
+                const SizedBox(
+                  height: 12.0,
+                ),
                 // Nivel Intermedio
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Intermedio",
-                      style: TextStyle(
-                        fontSize: 21.0,
-                        color: Constants.primaryTextColor,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                ),
-                TopicsList(
-                    topics: Constants.topicsIntermedio,
-                    lesson: Constants.lessons),
+                // const Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     Text(
+                //       "Intermedio",
+                //       style: TextStyle(
+                //         fontSize: 21.0,
+                //         color: Constants.primaryTextColor,
+                //         fontWeight: FontWeight.w600,
+                //       ),
+                //     ),
+                //   ],
+                // ),
+                // TopicsList(
+                //     topics: Constants.topicsIntermedio,
+                //     lesson: Constants.lessons),
                 // Nivel Avanzado
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Avanzado",
-                      style: TextStyle(
-                        fontSize: 21.0,
-                        color: Constants.primaryTextColor,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                ),
-                TopicsList(
-                    topics: Constants.topicsAvanzado,
-                    lesson: Constants.lessons),
+                // const Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     Text(
+                //       "Avanzado",
+                //       style: TextStyle(
+                //         fontSize: 21.0,
+                //         color: Constants.primaryTextColor,
+                //         fontWeight: FontWeight.w600,
+                //       ),
+                //     ),
+                //   ],
+                // ),
+                // TopicsList(
+                //     topics: Constants.topicsAvanzado,
+                //     lesson: Constants.lessons),
                 const SizedBox(height: 30.0),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -215,32 +210,32 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 ),
                 const SizedBox(height: 20.0),
-                const Text(
-                  "Equipo Desarrollador",
-                  style: TextStyle(
-                    fontSize: 21.0,
-                    color: Constants.primaryTextColor,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                const SizedBox(height: 10.0),
-                SizedBox(
-                  height: ScreenUtil().setHeight(140.0),
-                  child: ListView.separated(
-                    separatorBuilder: (BuildContext context, int index) {
-                      return const SizedBox(
-                        width: 10.0,
-                      );
-                    },
-                    scrollDirection: Axis.horizontal,
-                    itemCount: Constants.instructors.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return InstructorCard(
-                        instructor: Constants.instructors[index],
-                      );
-                    },
-                  ),
-                )
+                // const Text(
+                //   "Equipo Desarrollador",
+                //   style: TextStyle(
+                //     fontSize: 21.0,
+                //     color: Constants.primaryTextColor,
+                //     fontWeight: FontWeight.w600,
+                //   ),
+                // ),
+                // const SizedBox(height: 10.0),
+                // SizedBox(
+                //   height: ScreenUtil().setHeight(140.0),
+                //   child: ListView.separated(
+                //     separatorBuilder: (BuildContext context, int index) {
+                //       return const SizedBox(
+                //         width: 10.0,
+                //       );
+                //     },
+                //     scrollDirection: Axis.horizontal,
+                //     itemCount: Constants.instructors.length,
+                //     itemBuilder: (BuildContext context, int index) {
+                //       return InstructorCard(
+                //         instructor: Constants.instructors[index],
+                //       );
+                //     },
+                //   ),
+                // )
               ],
             ),
           ),

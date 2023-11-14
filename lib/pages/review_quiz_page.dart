@@ -20,7 +20,7 @@ class _ReviewQuizPageState extends State<ReviewQuizPage> {
 
   Future<void> readJson() async {
     final String response = await rootBundle.loadString(
-        'assets/unity_${widget.unity}_lesson_${widget.lesson}.json');
+        'assets/database/unity_${widget.unity}_lesson_${widget.lesson}.json');
     final List<dynamic> data = await json.decode(response);
     for (var item in data) {
       Question question = Question.fromJson(item);
@@ -39,7 +39,7 @@ class _ReviewQuizPageState extends State<ReviewQuizPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Constants.redtortaKY,
+        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Constants.redKY,
           elevation: 0,

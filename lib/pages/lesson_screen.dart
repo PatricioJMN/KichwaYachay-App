@@ -51,11 +51,11 @@ class _LessonScreenState extends State<LessonScreen> {
                   height: ScreenUtil().setHeight(180.0),
                   width: ScreenUtil().setWidth(339.24),
                   decoration: BoxDecoration(
-                    color: Constants.primaryColor,
+                    color: Constants.topicsPrincipiante[unity - 1].color,
                     borderRadius: BorderRadius.circular(8.0),
                     boxShadow: const [
                       BoxShadow(
-                        color: Color.fromRGBO(255, 99, 128, 0.6),
+                        color: Color.fromRGBO(255, 255, 255, 0.6),
                         spreadRadius: 0,
                         blurRadius: 6,
                         offset: Offset(0, 2), // changes position of shadow
@@ -82,7 +82,8 @@ class _LessonScreenState extends State<LessonScreen> {
                                     ),
                                     child: Center(
                                       child: Text(
-                                        Constants.topicsPrincipiante[0].points,
+                                        Constants.topicsPrincipiante[unity - 1]
+                                            .points,
                                         style: const TextStyle(
                                           color: Constants.primaryTextColor,
                                           fontWeight: FontWeight.w600,
@@ -93,9 +94,9 @@ class _LessonScreenState extends State<LessonScreen> {
                                   const SizedBox(
                                     width: 10.0,
                                   ),
-                                  Text(
-                                    Constants.topicsPrincipiante[0].points,
-                                    style: const TextStyle(
+                                  const Text(
+                                    'Minutos',
+                                    style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w600,
                                       fontSize: 14.0,
@@ -104,7 +105,8 @@ class _LessonScreenState extends State<LessonScreen> {
                                 ],
                               ),
                               Text(
-                                Constants.topicsPrincipiante[0].topic,
+                                Constants.topicsPrincipiante[unity - 1].topic
+                                    .toString(),
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600,
@@ -112,7 +114,7 @@ class _LessonScreenState extends State<LessonScreen> {
                                 ),
                               ),
                               Text(
-                                Constants.topicsPrincipiante[0].time,
+                                Constants.topicsPrincipiante[unity - 1].time,
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 20.0,
@@ -124,11 +126,11 @@ class _LessonScreenState extends State<LessonScreen> {
                       ),
                       Expanded(
                         child: Container(
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.fill,
                               image: AssetImage(
-                                "assets/images/course-1.png",
+                                Constants.topicsPrincipiante[unity - 1].image,
                               ),
                             ),
                           ),

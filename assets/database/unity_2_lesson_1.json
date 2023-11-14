@@ -1,0 +1,37 @@
+[
+  {
+    "question": "¿Cuál de los siguientes es agua?",
+    "questionK": "Maykanta yaku kan",
+    "traduccion": "Yaku",
+    "audioPath": "",
+    "imagePath": "Yaku"
+  },
+  {
+    "question": "¿Cuál de los siguientes es pan",
+    "questionK": "Maykanta tanta kan?",
+    "traduccion": "Tanta",
+    "audioPath": "",
+    "imagePath": "Tanta"
+  },
+  {
+    "question": "¿Cuál de los siguientes es leche?",
+    "questionK": "Maykanta ñuñu kan",
+    "traduccion": "Ñuñu",
+    "audioPath": "",
+    "imagePath": "Ñuñu"
+  },
+  {
+    "question": "¿Cuál de los siguientes es pezcado?",
+    "questionK": "Maykanta challwa kan",
+    "traduccion": "Challwa",
+    "audioPath": "",
+    "imagePath": "Challwa"
+  },
+  {
+    "question": "¿Cuál de los siguientes es queso?",
+    "questionK": "Maykanta makinchu kan",
+    "traduccion": "Makinchu",
+    "audioPath": "",
+    "imagePath": "Makinchu"
+  }
+]

@@ -36,7 +36,26 @@ class TopicCard extends StatelessWidget {
                     children: [
                       Wrap(
                         children: [
+                          Text(
+                            topic.topic,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.end,
+                          ),
+                          Text(
+                            topic.time,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 16.0,
+                            ),
+                          ),
                           Container(
+                            margin: const EdgeInsets.only(
+                                left: 0, top: 10, right: 60, bottom: 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                             width: 30.0,
                             height: 30.0,
                             decoration: const BoxDecoration(
@@ -44,43 +63,32 @@ class TopicCard extends StatelessWidget {
                               color: Colors.white,
                             ),
                             child: Center(
-                              child: Text(
-                                topic.points,
-                                style: const TextStyle(
-                                  color: Constants.primaryTextColor,
-                                  fontWeight: FontWeight.w600,
-                                ),
+                                child: Text(
+                              topic.points,
+                              style: const TextStyle(
+                                color: Constants.primaryTextColor,
+                                fontWeight: FontWeight.w600,
                               ),
-                            ),
+                            )),
                           ),
                           const SizedBox(
-                            width: 10.0,
+                            width: 0.0,
+                            height: 45.0,
                           ),
                           const Text(
-                            "Puntaje",
+                            "Minutos",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
-                              fontSize: 14.0,
+                              fontSize: 15.0,
                             ),
+                            textAlign: TextAlign.justify,
                           )
                         ],
                       ),
-                      Text(
-                        topic.topic,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Text(
-                        "Dura ${topic.time}",
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 14.0,
-                        ),
-                      )
+                      // const SizedBox(
+                      //   width: 30.0,
+                      // ),
                     ],
                   ),
                 ),
