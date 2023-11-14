@@ -72,7 +72,9 @@ class _ReviewQuizPageState extends State<ReviewQuizPage> {
                             child: ListTile(
                               leading: Text("${index + 1}"),
                               title: Text(quiz.questions[index].question),
-                              trailing: Text(quiz.questions[index].answer),
+                              trailing: SizedBox(
+                                  width: 100,
+                                  child: Text(quiz.questions[index].answer)),
                             ),
                           );
                         }),

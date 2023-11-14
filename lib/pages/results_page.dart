@@ -55,9 +55,16 @@ class ResultsPage extends StatelessWidget {
                         leading: quiz.questions[index].correct
                             ? Icon(Icons.check, color: Colors.green.shade900)
                             : Icon(Icons.close, color: Colors.red.shade900),
-                        title: Text(quiz.questions[index].question),
+                        title: Text(
+                          quiz.questions[index].question,
+                        ),
                         subtitle: Text(quiz.questions[index].selected),
-                        trailing: Text(quiz.questions[index].answer),
+                        trailing: SizedBox(
+                          width: 100,
+                          child: Text(
+                            quiz.questions[index].answer,
+                          ),
+                        ),
                       ),
                     );
                   }),

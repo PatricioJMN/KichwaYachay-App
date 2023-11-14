@@ -23,85 +23,85 @@
   {
     "question": "¿Cómo se dice Amarillo?",
     "questionK": "",
-    "traduccion": "Qillu",
+    "traduccion": "Killu",
     "audioPath": "",
-    "imagePath": "Qillu"
+    "imagePath": "Killu"
   },
   {
     "question": "¿Cómo se dice Azul?",
     "questionK": "",
-    "traduccion": "Anqas",
+    "traduccion": "Ankas",
     "audioPath": "",
-    "imagePath": "Anqas"
+    "imagePath": "Ankas"
   },
   {
     "question": "¿Cómo se dice Morado?",
     "questionK": "",
-    "traduccion": "Kulli",
+    "traduccion": "Maywa",
     "audioPath": "",
-    "imagePath": "Kulli"
+    "imagePath": "Maywa"
   },
   {
     "question": "¿Cómo se dice Plomo?",
     "questionK": "",
-    "traduccion": "Uqi",
+    "traduccion": "Suku",
     "audioPath": "",
-    "imagePath": "Uqi"
+    "imagePath": "Suku"
   },
   {
     "question": "¿Cómo se dice Verde?",
     "questionK": "",
-    "traduccion": "Qumir",
+    "traduccion": "Waylla",
     "audioPath": "",
-    "imagePath": "Qumir"
+    "imagePath": "Waylla"
   },
   {
     "question": "¿Cómo se dice Celeste?",
     "questionK": "",
-    "traduccion": "Qamya anqas",
+    "traduccion": "Chawa Ankas",
     "audioPath": "",
-    "imagePath": "Qamya anqas"
+    "imagePath": "Chawa Ankas"
   },
   {
     "question": "¿Cómo se dice Rosado?",
     "questionK": "",
-    "traduccion": "Qamya puka",
+    "traduccion": "Waminsi",
     "audioPath": "",
-    "imagePath": "Qamya puka"
+    "imagePath": "Waminsi"
   },
   {
     "question": "¿Cómo se dice Azul Oscuro?",
     "questionK": "",
-    "traduccion": "Yana anqas",
+    "traduccion": "Yanalla Ankas",
     "audioPath": "",
-    "imagePath": "Yana anqas"
+    "imagePath": "Yanalla Ankas"
   },
   {
     "question": "¿Cómo se dice Verde Oscuro?",
     "questionK": "",
-    "traduccion": "Yana qumir",
+    "traduccion": "Yanalla Waylla",
     "audioPath": "",
-    "imagePath": "Yana qumir"
+    "imagePath": "Yanalla Waylla"
   },
   {
     "question": "¿Cómo se dice Café?",
     "questionK": "",
-    "traduccion": "Chumpi",
+    "traduccion": "Paku",
     "audioPath": "",
-    "imagePath": "Chumpi"
+    "imagePath": "Paku"
   },
   {
     "question": "¿Cómo se dice Naranja?",
     "questionK": "",
-    "traduccion": "Nina puka",
-    "audioPath": "",
-    "imagePath": "Nina puka"
+    "traduccion": "Killpu",
+    "audioPath": "Killpu",
+    "imagePath": "Killpu"
   },
   {
     "question": "¿Cómo se dice Dorado?",
     "questionK": "",
-    "traduccion": "Quri",
+    "traduccion": "Curi",
     "audioPath": "",
-    "imagePath": "Quri"
+    "imagePath": "Curi"
   }
 ]
