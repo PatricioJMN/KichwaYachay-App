@@ -29,7 +29,7 @@ class UserMenuBar extends StatelessWidget {
                 ),
               ),
               TextSpan(
-                text: "Usuario",
+                text: "Patricio",
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.w600,

@@ -1,6 +1,10 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/pages/quiz_screen.dart';
+import 'package:language_learning_ui/pages/drag_and_drop.dart';
+import 'package:language_learning_ui/pages/word_find.dart';
 import 'package:language_learning_ui/pages/review_quiz_page.dart';
 
 class QuizHomePage extends StatelessWidget {
@@ -65,6 +69,7 @@ class QuizHomePage extends StatelessWidget {
                                     unity: unity,
                                     lesson: lesson,
                                   )));
+                      // QuizScreen(unity: unity,lesson: lesson,)));
                     },
                     style: OutlinedButton.styleFrom(
                       foregroundColor: Constants.orangeLisKY,

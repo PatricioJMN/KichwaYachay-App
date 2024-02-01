@@ -48,21 +48,21 @@ class ResultsPage extends StatelessWidget {
                   itemCount: quiz.questions.length,
                   itemBuilder: (_, index) {
                     return Card(
-                      color: quiz.questions[index].correct
+                      color: quiz.questions[index].isCorrect
                           ? Colors.green.shade200
                           : Colors.red.shade200,
                       child: ListTile(
-                        leading: quiz.questions[index].correct
+                        leading: quiz.questions[index].isCorrect
                             ? Icon(Icons.check, color: Colors.green.shade900)
                             : Icon(Icons.close, color: Colors.red.shade900),
                         title: Text(
-                          quiz.questions[index].question,
+                          quiz.questions[index].questionSpanish,
                         ),
-                        subtitle: Text(quiz.questions[index].selected),
+                        subtitle: Text(quiz.questions[index].selectedOption),
                         trailing: SizedBox(
                           width: 100,
                           child: Text(
-                            quiz.questions[index].answer,
+                            quiz.questions[index].correctAnswer,
                           ),
                         ),
                       ),

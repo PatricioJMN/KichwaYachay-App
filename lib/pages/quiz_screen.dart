@@ -29,22 +29,36 @@ class _QuizScreenState extends State<QuizScreen> {
     final String response = await rootBundle.loadString(
         'assets/database/unity_${widget.unity}_lesson_${widget.lesson}.json');
     final List<dynamic> data = await json.decode(response);
-    List<int> optionList = List<int>.generate(data.length, (i) => i);
+    List<int> questionIndices = List<int>.generate(data.length, (i) => i);
     List<int> questionsAdded = [];
 
     while (true) {
-      optionList.shuffle();
-      int answer = optionList[0];
-      if (questionsAdded.contains(answer)) continue;
-      questionsAdded.add(answer);
+      questionIndices.shuffle();
+      int questionIndex = questionIndices[0];
+      if (questionsAdded.contains(questionIndex)) continue;
+      questionsAdded.add(questionIndex);
 
-      List<String> otherOptions = [];
-      for (var option in optionList.sublist(1, totalOptions)) {
-        otherOptions.add(data[option]['traduccion']);
+      final questionData = data[questionIndex];
+      String questionType = questionData['questionType'];
+      late Question question;
+
+      switch (questionType) {
+        case 'multiple_choice':
+          question = Question.fromJson(questionData);
+          question.optionList.shuffle();
+          // print(questionData);
+          question.questionType = questionType;
+          break;
+        case 'drag_and_drop':
+          // question = DragAndDropQuestion.fromJson(data[answer
+          break;
+        case 'question_sorting':
+          // question = QuestionSorting.fromJson(data[answer
+          break;
+        default:
+          throw ArgumentError('Invalid question type: $questionType');
       }
 
-      Question question = Question.fromJson(data[answer]);
-      question.addOptions(otherOptions);
       quiz.questions.add(question);
 
       if (quiz.questions.length >= totalQuestions) break;
@@ -60,9 +74,9 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _optionSelected(String selected) {
-    quiz.questions[questionIndex].selected = selected;
-    if (selected == quiz.questions[questionIndex].answer) {
-      quiz.questions[questionIndex].correct = true;
+    quiz.questions[questionIndex].selectedOption = selected;
+    if (selected == quiz.questions[questionIndex].correctAnswer) {
+      quiz.questions[questionIndex].isCorrect = true;
       quiz.right += 1;
     }
 
@@ -164,7 +178,7 @@ class _QuizScreenState extends State<QuizScreen> {
                             color: Colors.white,
                             margin: const EdgeInsets.all(15),
                             child: Text(
-                                '${quiz.questions[questionIndex].question}\n${quiz.questions[questionIndex].questionK}',
+                                '${quiz.questions[questionIndex].questionSpanish}\n${quiz.questions[questionIndex].questionKichwa}',
                                 style: const TextStyle(
                                   fontSize: 20.0,
                                   color: Colors.black,
@@ -193,20 +207,20 @@ class _QuizScreenState extends State<QuizScreen> {
                                     title: Center(
                                         child: Text(
                                             quiz.questions[questionIndex]
-                                                .options[index],
+                                                .optionList[index],
                                             textAlign: TextAlign.center,
                                             style:
                                                 const TextStyle(fontSize: 15))),
                                     // IMAGE AFTER THE OPTION
                                     subtitle: Image.asset(
-                                      'assets/images/unity_${widget.unity}/lesson_${widget.lesson}/${quiz.questions[questionIndex].options[index]}.png',
+                                      'assets/images/unity_${widget.unity}/lesson_${widget.lesson}/${quiz.questions[questionIndex].optionList[index]}.png',
                                       width: 75,
                                       height: 75,
                                     ),
                                     onTap: () {
                                       _optionSelected(quiz
                                           .questions[questionIndex]
-                                          .options[index]);
+                                          .optionList[index]);
                                     },
                                   ),
                                 );

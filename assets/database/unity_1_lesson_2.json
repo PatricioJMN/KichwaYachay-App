@@ -1,114 +1,210 @@
 [
-  {
-    "question": "¿Cómo se dice Perro?",
-    "questionK": "",
-    "traduccion": "Allku",
-    "audioPath": "",
-    "imagePath": "Allku"
-  },
-  {
-    "question": "¿Cómo se dice Delfín?",
-    "questionK": "",
-    "traduccion": "Walchaka",
-    "audioPath": "",
-    "imagePath": "Walchaka"
-  },
-  {
-    "question": "¿Cómo se dice Serpiente?",
-    "questionK": "",
-    "traduccion": "Amaru",
-    "audioPath": "",
-    "imagePath": "Amaru"
-  },
-  {
-    "question": "¿Cómo se dice Hormiga?",
-    "questionK": "",
-    "traduccion": "Añanku",
-    "audioPath": "",
-    "imagePath": "Añanku"
-  },
-  {
-    "question": "¿Cómo se dice Cangrejo?",
-    "questionK": "",
-    "traduccion": "Apankura",
-    "audioPath": "",
-    "imagePath": "Apankura"
-  },
-  {
-    "question": "¿Cómo se dice Gallina?",
-    "questionK": "",
-    "traduccion": "Atallpa",
-    "audioPath": "",
-    "imagePath": "Atallpa"
-  },
-  {
-    "question": "¿Cómo se dice Lobo?",
-    "questionK": "",
-    "traduccion": "Atuk",
-    "audioPath": "",
-    "imagePath": "Atuk"
-  },
-  {
-    "question": "¿Cómo se dice Pez?",
-    "questionK": "",
-    "traduccion": "Challwa",
-    "audioPath": "",
-    "imagePath": "Challwa"
-  },
-  {
-    "question": "¿Cómo se dice Caracol?",
-    "questionK": "",
-    "traduccion": "Churu",
-    "audioPath": "",
-    "imagePath": "Churu"
-  },
-  {
-    "question": "¿Cómo se dice Lechuza?",
-    "questionK": "",
-    "traduccion": "Chushik",
-    "audioPath": "",
-    "imagePath": "Chushik"
-  },
-  {
-    "question": "¿Cómo se dice Rana?",
-    "questionK": "",
-    "traduccion": "Hampatu",
-    "audioPath": "",
-    "imagePath": "Hampatu"
-  },
-  {
-    "question": "¿Cómo se dice Cerdo?",
-    "questionK": "",
-    "traduccion": "Kuchi",
-    "audioPath": "",
-    "imagePath": "Kuchi"
-  },
-  {
-    "question": "¿Cómo se dice Pato?",
-    "questionK": "",
-    "traduccion": "Kulta",
-    "audioPath": "",
-    "imagePath": "Kulta"
-  },
-  {
-    "question": "¿Cómo se dice Condor?",
-    "questionK": "",
-    "traduccion": "Kuntur",
-    "audioPath": "",
-    "imagePath": "Kuntur"
-  },
-  {
-    "question": "¿Cómo se dice Mono?",
-    "questionK": "",
-    "traduccion": "Kushillu",
-    "audioPath": "",
-    "imagePath": "Kushillu"
-  },
-  {
-    "question": "¿Cómo se dice Gato?",
-    "questionK": "",
-    "traduccion": "Misi",
-    "audioPath": "",
-    "imagePath": "Misi"
-  }
+    {
+        "questionSpanish": "¿Cómo se dice Perro?",
+        "questionKichwa": "",
+        "correctAnswer": "Allku",
+        "audioPath": "",
+        "imagePath": "Allku",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Allku",
+            "Misi",
+            "Kulta"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Delfín?",
+        "questionKichwa": "",
+        "correctAnswer": "Walchaka",
+        "audioPath": "",
+        "imagePath": "Walchaka",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Walchaka",
+            "Añanku",
+            "Apankura"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Serpiente?",
+        "questionKichwa": "",
+        "correctAnswer": "Amaru",
+        "audioPath": "",
+        "imagePath": "Amaru",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Amaru",
+            "Allku",
+            "Walchaka"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Hormiga?",
+        "questionKichwa": "",
+        "correctAnswer": "Añanku",
+        "audioPath": "",
+        "imagePath": "Añanku",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Añanku",
+            "Misi",
+            "Walchaka"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Cangrejo?",
+        "questionKichwa": "",
+        "correctAnswer": "Apankura",
+        "audioPath": "",
+        "imagePath": "Apankura",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Apankura",
+            "Walchaka",
+            "Añanku"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Gallina?",
+        "questionKichwa": "",
+        "correctAnswer": "Atallpa",
+        "audioPath": "",
+        "imagePath": "Atallpa",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Atallpa",
+            "Kushillu",
+            "Allku"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Lobo?",
+        "questionKichwa": "",
+        "correctAnswer": "Atuk",
+        "audioPath": "",
+        "imagePath": "Atuk",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Atuk",
+            "Walchaka",
+            "Kulta"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Pez?",
+        "questionKichwa": "",
+        "correctAnswer": "Challwa",
+        "audioPath": "",
+        "imagePath": "Challwa",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Challwa",
+            "Misi",
+            "Walchaka"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Caracol?",
+        "questionKichwa": "",
+        "correctAnswer": "Churu",
+        "audioPath": "",
+        "imagePath": "Churu",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Churu",
+            "Atuk",
+            "Kulta"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Lechuza?",
+        "questionKichwa": "",
+        "correctAnswer": "Chushik",
+        "audioPath": "",
+        "imagePath": "Chushik",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Chushik",
+            "Kushillu",
+            "Churu"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Rana?",
+        "questionKichwa": "",
+        "correctAnswer": "Hampatu",
+        "audioPath": "",
+        "imagePath": "Hampatu",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Hampatu",
+            "Allku",
+            "Atuk"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Cerdo?",
+        "questionKichwa": "",
+        "correctAnswer": "Kuchi",
+        "audioPath": "",
+        "imagePath": "Kuchi",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Kuchi",
+            "Churu",
+            "Apankura"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Pato?",
+        "questionKichwa": "",
+        "correctAnswer": "Kulta",
+        "audioPath": "",
+        "imagePath": "Kulta",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Kulta",
+            "Churu",
+            "Amaru"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Condor?",
+        "questionKichwa": "",
+        "correctAnswer": "Kuntur",
+        "audioPath": "",
+        "imagePath": "Kuntur",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Kuntur",
+            "Kushillu",
+            "Kulta"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Mono?",
+        "questionKichwa": "",
+        "correctAnswer": "Kushillu",
+        "audioPath": "",
+        "imagePath": "Kushillu",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Kushillu",
+            "Allku",
+            "Atuk"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Gato?",
+        "questionKichwa": "",
+        "correctAnswer": "Misi",
+        "audioPath": "",
+        "imagePath": "Misi",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Misi",
+            "Kulta",
+            "Amaru"
+        ]
+    }
 ]

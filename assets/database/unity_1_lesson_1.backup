@@ -1,0 +1,177 @@
+[
+    {
+        "questionSpanish": "¿Cómo se dice Negro?",
+        "questionKichwa": "",
+        "correctAnswer": "Yana",
+        "audioPath": "",
+        "imagePath": "Yana",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Yana",
+            "Puka",
+            "Yurak"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Rojo?",
+        "questionKichwa": "",
+        "correctAnswer": "Puka",
+        "audioPath": "",
+        "imagePath": "Puka",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Puka",
+            "Yurak",
+            "Killu"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Blanco?",
+        "questionKichwa": "",
+        "correctAnswer": "Yurak",
+        "audioPath": "",
+        "imagePath": "Yurak",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Yurak",
+            "Ankas",
+            "Yana"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Amarillo?",
+        "questionKichwa": "",
+        "correctAnswer": "Killu",
+        "audioPath": "",
+        "imagePath": "Killu",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Killu",
+            "Yana",
+            "Yanalla Waylla"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Azul?",
+        "questionKichwa": "",
+        "correctAnswer": "Ankas",
+        "audioPath": "",
+        "imagePath": "Ankas",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Ankas",
+            "Maywa",
+            "Waminsi"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Morado?",
+        "questionKichwa": "",
+        "correctAnswer": "Maywa",
+        "audioPath": "",
+        "imagePath": "Maywa",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Maywa"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Plomo?",
+        "questionKichwa": "",
+        "correctAnswer": "Suku",
+        "audioPath": "",
+        "imagePath": "Suku",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Suku"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Verde?",
+        "questionKichwa": "",
+        "correctAnswer": "Waylla",
+        "audioPath": "",
+        "imagePath": "Waylla",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Waylla"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Celeste?",
+        "questionKichwa": "",
+        "correctAnswer": "Chawa Ankas",
+        "audioPath": "",
+        "imagePath": "Chawa Ankas",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Chawa Ankas"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Rosado?",
+        "questionKichwa": "",
+        "correctAnswer": "Waminsi",
+        "audioPath": "",
+        "imagePath": "Waminsi",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Waminsi"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Azul Oscuro?",
+        "questionKichwa": "",
+        "correctAnswer": "Yanalla Ankas",
+        "audioPath": "",
+        "imagePath": "Yanalla Ankas",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Yanalla Ankas"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Verde Oscuro?",
+        "questionKichwa": "",
+        "correctAnswer": "Yanalla Waylla",
+        "audioPath": "",
+        "imagePath": "Yanalla Waylla",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Yanalla Waylla"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Café?",
+        "questionKichwa": "",
+        "correctAnswer": "Paku",
+        "audioPath": "",
+        "imagePath": "Paku",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Paku"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Naranja?",
+        "questionKichwa": "",
+        "correctAnswer": "Killpu",
+        "audioPath": "Killpu",
+        "imagePath": "Killpu",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Killpu"
+        ]
+    },
+    {
+        "questionSpanish": "¿Cómo se dice Dorado?",
+        "questionKichwa": "",
+        "correctAnswer": "Curi",
+        "audioPath": "",
+        "imagePath": "Curi",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Curi"
+        ]
+    }
+]

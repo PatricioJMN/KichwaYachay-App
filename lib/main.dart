@@ -5,6 +5,7 @@ import 'package:language_learning_ui/pages/create_account.dart';
 import 'package:language_learning_ui/pages/dashboard.dart';
 import 'package:language_learning_ui/pages/home.dart';
 import 'package:language_learning_ui/pages/lesson_screen.dart';
+import 'package:language_learning_ui/pages/word_find.dart';
 // import 'package:language_learning_ui/constants.dart';
 
 void main() async {
@@ -49,6 +50,10 @@ Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     case "/choose-language":
       return MaterialPageRoute(builder: (BuildContext context) {
         return const ChooseLanguage();
+      });
+    case "/word-find":
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return const WordFind();
       });
     case "/dashboard":
       return MaterialPageRoute(builder: (BuildContext context) {

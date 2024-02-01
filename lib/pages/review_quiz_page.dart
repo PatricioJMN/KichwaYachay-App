@@ -71,10 +71,12 @@ class _ReviewQuizPageState extends State<ReviewQuizPage> {
                             color: Constants.yellowaguitaKY,
                             child: ListTile(
                               leading: Text("${index + 1}"),
-                              title: Text(quiz.questions[index].question),
+                              title:
+                                  Text(quiz.questions[index].questionSpanish),
                               trailing: SizedBox(
                                   width: 100,
-                                  child: Text(quiz.questions[index].answer)),
+                                  child: Text(
+                                      quiz.questions[index].correctAnswer)),
                             ),
                           );
                         }),
