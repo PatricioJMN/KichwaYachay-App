@@ -10,7 +10,9 @@
             "Allku",
             "Misi",
             "Kulta"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Delfín?",
@@ -23,7 +25,9 @@
             "Walchaka",
             "Añanku",
             "Apankura"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Serpiente?",
@@ -36,7 +40,9 @@
             "Amaru",
             "Allku",
             "Walchaka"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Hormiga?",
@@ -49,7 +55,9 @@
             "Añanku",
             "Misi",
             "Walchaka"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Cangrejo?",
@@ -62,7 +70,9 @@
             "Apankura",
             "Walchaka",
             "Añanku"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Gallina?",
@@ -75,7 +85,9 @@
             "Atallpa",
             "Kushillu",
             "Allku"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Lobo?",
@@ -88,7 +100,9 @@
             "Atuk",
             "Walchaka",
             "Kulta"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Pez?",
@@ -101,7 +115,9 @@
             "Challwa",
             "Misi",
             "Walchaka"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Caracol?",
@@ -114,7 +130,9 @@
             "Churu",
             "Atuk",
             "Kulta"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Lechuza?",
@@ -127,7 +145,9 @@
             "Chushik",
             "Kushillu",
             "Churu"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Rana?",
@@ -140,7 +160,9 @@
             "Hampatu",
             "Allku",
             "Atuk"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Cerdo?",
@@ -153,7 +175,9 @@
             "Kuchi",
             "Churu",
             "Apankura"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Pato?",
@@ -166,7 +190,9 @@
             "Kulta",
             "Churu",
             "Amaru"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Condor?",
@@ -179,7 +205,9 @@
             "Kuntur",
             "Kushillu",
             "Kulta"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Mono?",
@@ -192,7 +220,9 @@
             "Kushillu",
             "Allku",
             "Atuk"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Gato?",
@@ -205,6 +235,8 @@
             "Misi",
             "Kulta",
             "Amaru"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     }
 ]

@@ -4,8 +4,6 @@ import 'package:language_learning_ui/models/instructor_model.dart';
 import 'package:language_learning_ui/models/lesson_model.dart';
 import 'package:language_learning_ui/models/topic_model.dart';
 import 'package:language_learning_ui/pages/lesson_screen.dart';
-// ignore: unused_import
-import 'package:language_learning_ui/pages/quiz_screen.dart';
 
 class Constants {
   static const Color primaryTextColor = Color.fromRGBO(55, 75, 53, 1);

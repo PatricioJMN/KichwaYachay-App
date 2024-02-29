@@ -1,10 +1,9 @@
-// ignore_for_file: unused_import
-
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
+import 'package:language_learning_ui/models/question_model.dart';
 import 'package:language_learning_ui/constants.dart';
 import 'package:language_learning_ui/pages/quiz_screen.dart';
-import 'package:language_learning_ui/pages/drag_and_drop.dart';
-import 'package:language_learning_ui/pages/word_find.dart';
 import 'package:language_learning_ui/pages/review_quiz_page.dart';
 
 class QuizHomePage extends StatelessWidget {
@@ -12,6 +11,33 @@ class QuizHomePage extends StatelessWidget {
   final String lesson;
   const QuizHomePage({Key? key, required this.unity, required this.lesson})
       : super(key: key);
+
+  Future<List<Question>> _loadQuestions(int unity, String lesson) async {
+    final jsonString = await rootBundle
+        .loadString('assets/database/unity_${unity}_lesson_$lesson.json');
+    final jsonData = json.decode(jsonString);
+    final List<Question> questions = (jsonData as List<dynamic>)
+        .map((question) => Question(
+              questionSpanish: question['questionSpanish'],
+              questionKichwa: question['questionKichwa'],
+              correctAnswer: question['correctAnswer'],
+              audioPath: question['audioPath'],
+              imagePath: question['imagePath'],
+              questionType: question['questionType'],
+              optionList: (question['optionList'] as List<dynamic>)
+                  .map((option) => option.toString())
+                  .toList(),
+              words: (question['words'] as List<dynamic>)
+                  .map((option) => option.toString())
+                  .toList(),
+              correctOrder: (question['correctOrder'] as List<dynamic>)
+                  .map((option) => option.toString())
+                  .toList(),
+            ))
+        .toList();
+
+    return questions;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +52,7 @@ class QuizHomePage extends StatelessWidget {
           children: [
             Container(
                 margin: const EdgeInsets.only(top: 60, bottom: 40),
-                child: Image.asset("assets/images/logo_kichwa_yachay.png")
-                // const Icon(Icons.wb_sunny_outlined,
-                //     size: 100,
-                //     color: Color.fromRGBO(
-                //         231, 106, 38, 1.0)), //Color del ícono de sol
-                ),
+                child: Image.asset("assets/images/logo_kichwa_yachay.png")),
             Card(
               margin: const EdgeInsets.all(20),
               shape: RoundedRectangleBorder(
@@ -61,15 +82,19 @@ class QuizHomePage extends StatelessWidget {
                     ),
                   ),
                   OutlinedButton(
-                    onPressed: () {
+                    onPressed: () async {
+                      final questions = await _loadQuestions(unity, lesson);
+                      // print(questions);
+                      // ignore: use_build_context_synchronously
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => QuizScreen(
-                                    unity: unity,
-                                    lesson: lesson,
-                                  )));
-                      // QuizScreen(unity: unity,lesson: lesson,)));
+                            builder: (context) => QuizScreen(
+                              unity: unity,
+                              lesson: lesson,
+                              questions: questions,
+                            ),
+                          ));
                     },
                     style: OutlinedButton.styleFrom(
                       foregroundColor: Constants.orangeLisKY,

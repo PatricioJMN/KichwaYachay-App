@@ -1,15 +1,21 @@
 import json
 
-jsonfilename = 'unity_1_lesson_2.json'
+with open('unity_1_lesson_3.json', 'r') as file:
+    data = json.load(file)
 
-# Read the JSON data from the file
-with open(jsonfilename, 'r', encoding='utf-8') as f:
-    data = json.load(f)
+new_data = []
 
-# Add the new field to each item in the data
 for item in data:
-    item['optionList'] = [item['correctAnswer'], ]
+    new_item = {
+        "questionSpanish": item["question"],
+        "questionKichwa": item["questionK"],
+        "correctAnswer": item["traduccion"],
+        "audioPath": item["audioPath"],
+        "imagePath": item["imagePath"],
+        "questionType": item["questionType"],
+        "optionList": [item["traduccion"]]
+    }
+    new_data.append(new_item)
 
-# Write the updated data back to the file
-with open(jsonfilename, 'w', encoding='utf-8') as f:
-    json.dump(data, f, indent=4)
+with open('archivo_modificado.json', 'w') as file:
+    json.dump(new_data, file, indent=4, ensure_ascii=False)

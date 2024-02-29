@@ -7,8 +7,6 @@ import 'package:language_learning_ui/constants.dart';
 // import 'package:language_learning_ui/models/unity_model.dart';
 // ignore: unused_import
 import 'package:language_learning_ui/pages/quiz_home_page.dart';
-// ignore: unused_import
-import 'package:language_learning_ui/pages/quiz_screen.dart';
 import 'package:language_learning_ui/widgets/bottom_bar.dart';
 import 'package:language_learning_ui/widgets/user_menu_bar.dart';
 import 'package:language_learning_ui/widgets/lesson_card.dart';

@@ -10,7 +10,9 @@
             "Yana",
             "Suku",
             "Waylla"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Rojo?",
@@ -23,7 +25,9 @@
             "Puka",
             "Yurak",
             "Paku"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Blanco?",
@@ -36,7 +40,9 @@
             "Yurak",
             "Killpu",
             "Chawa Ankas"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Amarillo?",
@@ -49,7 +55,9 @@
             "Killu",
             "Yana",
             "Yanalla Waylla"
-        ]
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
         "questionSpanish": "¿Cómo se dice Azul?",
@@ -62,6 +70,31 @@
             "Ankas",
             "Maywa",
             "Waminsi"
+        ],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "Escuchar y Traducir:",
+        "questionKichwa": "",
+        "correctAnswer": "Huevo",
+        "audioPath": "Lulun.mp3",
+        "imagePath": "",
+        "questionType": "listen_and_translate",
+        "optionList": ["Leche", "Huevo", "Pan"],
+        "words": [
+            "como",
+            "yo",
+            "tu",
+            "agua",
+            "pan"
+        ],
+        "correctOrder": [
+            true,
+            true,
+            false,
+            false,
+            true
         ]
     }
 ]

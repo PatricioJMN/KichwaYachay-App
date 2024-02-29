@@ -1,106 +1,198 @@
 [
     {
-        "question": "¿Cuál animal es Negro?",
-        "questionK": "Maykan wiwata Yana kan?",
-        "traduccion": "Añankuka yanami kan",
+        "questionSpanish": "¿Cuál animal es Negro?",
+        "questionKichwa": "Maykan wiwata Yana kan?",
+        "correctAnswer": "Añankuka yanami kan",
         "audioPath": "",
         "imagePath": "Añankuka yanami kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Añankuka yanami kan",
+            "Apankuraka killpumi kan",
+            "Pishkuka ankasmi kan"
+        ],
+        "words": [],
+        "correctOrder": []
+        
     },
     {
-        "question": "¿Cuál animal es Rojo?",
-        "questionK": "Maykan wiwata Yurak kan?",
-        "traduccion": "Pillpintuka pukami kan",
+        "questionSpanish": "¿Cuál animal es Rojo?",
+        "questionKichwa": "Maykan wiwata Yurak kan?",
+        "correctAnswer": "Pillpintuka pukami kan",
         "audioPath": "",
         "imagePath": "Pillpintuka pukami kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Pillpintuka pukami kan",
+            "Challwaka curimi kan",
+            "Walchakaka Chawalla ankasmi kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Blanco?",
-        "questionK": "Maykan wiwata Yurak kan?",
-        "traduccion": "Atallpaka yurakmi kan",
+        "questionSpanish": "¿Cuál animal es Blanco?",
+        "questionKichwa": "Maykan wiwata Yurak kan?",
+        "correctAnswer": "Atallpaka yurakmi kan",
         "audioPath": "",
         "imagePath": "Atallpaka yurakmi kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Atallpaka yurakmi kan",
+            "Challwaka curimi kan",
+            "Pillpintuka pukami kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Amarillo?",
-        "questionK": "Maykan wiwata Killu kan?",
-        "traduccion": "Kultaka Killumi kan",
+        "questionSpanish": "¿Cuál animal es Amarillo?",
+        "questionKichwa": "Maykan wiwata Killu kan?",
+        "correctAnswer": "Kultaka Killumi kan",
         "audioPath": "",
         "imagePath": "Kultaka Killumi kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Kultaka Killumi kan",
+            "Challwaka curimi kan",
+            "Apankuraka killpumi kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Azul?",
-        "questionK": "Maykan wiwata Ankas kan?",
-        "traduccion": "Pishkuka ankasmi kan",
+        "questionSpanish": "¿Cuál animal es Azul?",
+        "questionKichwa": "Maykan wiwata Ankas kan?",
+        "correctAnswer": "Pishkuka ankasmi kan",
         "audioPath": "",
         "imagePath": "Pishkuka ankasmi kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Pishkuka ankasmi kan",
+            "Apankuraka killpumi kan",
+            "Walchakaka Chawalla ankasmi kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Plomo?",
-        "questionK": "Maykan wiwata suku kan?",
-        "traduccion": "Kunturka sukumi kan",
+        "questionSpanish": "¿Cuál animal es Plomo?",
+        "questionKichwa": "Maykan wiwata suku kan?",
+        "correctAnswer": "Kunturka sukumi kan",
         "audioPath": "",
         "imagePath": "Kunturka sukumi kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Kunturka sukumi kan",
+            "Pillpintuka pukami kan",
+            "Apankuraka killpumi kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Verde?",
-        "questionK": "Maykan wiwata Waylla kan?",
-        "traduccion": "Amaruka Wayllami kan",
+        "questionSpanish": "¿Cuál animal es Verde?",
+        "questionKichwa": "Maykan wiwata Waylla kan?",
+        "correctAnswer": "Amaruka Wayllami kan",
         "audioPath": "",
         "imagePath": "Amaruka Wayllami kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Amaruka Wayllami kan",
+            "Pillpintuka pukami kan",
+            "Pishkuka ankasmi kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Celeste?",
-        "questionK": "Maykan wiwa Chawalla ankas kan?",
-        "traduccion": "Walchakaka Chawalla ankasmi kan",
+        "questionSpanish": "¿Cuál animal es Celeste?",
+        "questionKichwa": "Maykan wiwa Chawalla ankas kan?",
+        "correctAnswer": "Walchakaka Chawalla ankasmi kan",
         "audioPath": "",
         "imagePath": "Walchakaka chawalla ankasmi kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Walchakaka Chawalla ankasmi kan",
+            "Pillpintuka pukami kan",
+            "Pishkuka ankasmi kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Rosado?",
-        "questionK": "Maykan wiwata Waminsi kan?",
-        "traduccion": "Kuchika Waminsimi kan",
+        "questionSpanish": "¿Cuál animal es Rosado?",
+        "questionKichwa": "Maykan wiwata Waminsi kan?",
+        "correctAnswer": "Kuchika Waminsimi kan",
         "audioPath": "",
         "imagePath": "Kuchika Waminsimi kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Kuchika Waminsimi kan",
+            "Pillpintuka pukami kan",
+            "Kunturka sukumi kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Verde Oscuro?",
-        "questionK": "Maykan wiwata Yanalla Waylla kan?",
-        "traduccion": "Hampatuka yanalla wayllami kan",
+        "questionSpanish": "¿Cuál animal es Verde Oscuro?",
+        "questionKichwa": "Maykan wiwata Yanalla Waylla kan?",
+        "correctAnswer": "Hampatuka yanalla wayllami kan",
         "audioPath": "",
         "imagePath": "Hampatuka yanalla wayllami kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Hampatuka yanalla wayllami kan",
+            "Añankuka yanami kan",
+            "Pillpintuka pukami kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Café?",
-        "questionK": "Maykan wiwata paku kan?",
-        "traduccion": "Kushilluka pakumi kan",
+        "questionSpanish": "¿Cuál animal es Café?",
+        "questionKichwa": "Maykan wiwata paku kan?",
+        "correctAnswer": "Kushilluka pakumi kan",
         "audioPath": "",
         "imagePath": "Kushilluka pakumi kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Kushilluka pakumi kan",
+            "Añankuka yanami kan",
+            "Kunturka sukumi kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Naranja?",
-        "questionK": "Maykan wiwata Killpu kan?",
-        "traduccion": "Apankuraka killpumi kan",
+        "questionSpanish": "¿Cuál animal es Naranja?",
+        "questionKichwa": "Maykan wiwata Killpu kan?",
+        "correctAnswer": "Apankuraka killpumi kan",
         "audioPath": "",
         "imagePath": "Apankuraka Killpumi kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Apankuraka killpumi kan",
+            "Añankuka yanami kan",
+            "Kunturka sukumi kan"
+        ],
+        "words": [],
+        "correctOrder": []
     },
     {
-        "question": "¿Cuál animal es Dorado?",
-        "questionK": "Maykan wiwata Curi kan?",
-        "traduccion": "Challwaka curimi kan",
+        "questionSpanish": "¿Cuál animal es Dorado?",
+        "questionKichwa": "Maykan wiwata Curi kan?",
+        "correctAnswer": "Challwaka curimi kan",
         "audioPath": "",
         "imagePath": "Challwaka curimi kan",
-        "questionType": "multiple_choice"
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Challwaka curimi kan",
+            "Añankuka yanami kan",
+            "Kunturka sukumi kan"
+        ],
+        "words": [],
+        "correctOrder": []
     }
 ]

@@ -1,0 +1,116 @@
+[
+    {
+        "questionSpanish": "¿Cuál de los siguientes es agua?",
+        "questionKichwa": "",
+        "correctAnswer": "Yaku",
+        "audioPath": "",
+        "imagePath": "Yaku",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Yaku",
+            "Ñuñu",
+            "Tanta"
+        ],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "¿Cuál de los siguientes es queso?",
+        "questionKichwa": "",
+        "correctAnswer": "Makinchu",
+        "audioPath": "",
+        "imagePath": "Makinchu",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Tanta",
+            "Aycha",
+            "Makinchu"
+        ],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "¿Cuál de los siguientes es carne?",
+        "questionKichwa": "",
+        "correctAnswer": "Aycha",
+        "audioPath": "",
+        "imagePath": "Aycha",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Tanta",
+            "Aycha",
+            "Purutu"
+        ],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "¿Que come ella?",
+        "questionKichwa": "Imatak pay mikun",
+        "correctAnswer": "Tanta",
+        "audioPath": "",
+        "imagePath": "Imatak_pay_mikun",
+        "questionType": "multiple_choice",
+        "optionList": ["Tanta", "Lulun", "Yaku"],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "¿Que bebe el?",
+        "questionKichwa": "Imatak pay upian",
+        "correctAnswer": "Tanta",
+        "audioPath": "",
+        "imagePath": "Imatak_pay_upian",
+        "questionType": "multiple_choice",
+        "optionList": ["Ñuñu", "Yaku", "Aycha"],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "¿Cuál es fréjol?",
+        "questionKichwa": "",
+        "correctAnswer": "Purutu",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "multiple_choice",
+        "optionList": ["Ñuñu", "Purutu", "Palta"],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "¿Cuál es Aguacate?",
+        "questionKichwa": "",
+        "correctAnswer": "Palta",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "multiple_choice",
+        "optionList": ["Ñuñu", "Purutu", "Palta"],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "Traducir:",
+        "questionKichwa": "Payka paltami mikun",
+        "correctAnswer": "",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "translate",
+        "optionList": [],
+        "words": [
+            "ellos",
+            "ella",
+            "bebe",
+            "come",
+            "queso",
+            "aguacate"
+        ],
+        "correctOrder": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            true
+        ]
+    }
+]

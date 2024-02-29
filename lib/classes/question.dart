@@ -8,6 +8,8 @@ class Question {
   String audioPath = '';
   String imagePath = '';
   List<dynamic> optionList = [];
+  List<dynamic>? words;
+  List<dynamic>? correctOrder;
 
   Question.fromJson(Map<String, dynamic> json)
       : questionSpanish = json['questionSpanish'],
@@ -17,14 +19,4 @@ class Question {
         optionList = json['optionList'],
         audioPath = json['audioPath'],
         imagePath = json['imagePath'];
-
-  // void shuffleOptions() {
-  //   optionList.shuffle();
-  // }
-
-  // void addOptions(List<dynamic> newOptions) {
-  //   optionList.addAll(newOptions);
-  //   optionList.add(correctAnswer);
-  //   optionList.shuffle();
-  // }
 }

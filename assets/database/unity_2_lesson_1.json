@@ -1,0 +1,116 @@
+[
+    {
+        "questionSpanish": "Traducir:",
+        "questionKichwa": "Payka yakutami upyan",
+        "correctAnswer": "",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "translate",
+        "optionList": [],
+        "words": [
+            "ella",
+            "come",
+            "bebe",
+            "pan",
+            "agua"
+        ],
+        "correctOrder": [
+            true,
+            false,
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "questionSpanish": "¿Cuál de los siguientes es agua?",
+        "questionKichwa": "",
+        "correctAnswer": "Yaku",
+        "audioPath": "",
+        "imagePath": "Yaku",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Yaku",
+            "Ñuñu",
+            "Tanta"
+        ],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "¿Cuál de los siguientes es pan?",
+        "questionKichwa": "",
+        "correctAnswer": "Tanta",
+        "audioPath": "",
+        "imagePath": "Tanta",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Tanta",
+            "Yaku",
+            "Lulun"
+        ],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "¿Cuál de los siguientes es leche?",
+        "questionKichwa": "",
+        "correctAnswer": "Ñuñu",
+        "audioPath": "",
+        "imagePath": "Ñuñu",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Ñuñu",
+            "Lulun",
+            "Yaku"
+        ],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "Traducir:",
+        "questionKichwa": "Ñukaka tantatami mikuni",
+        "correctAnswer": "",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "translate",
+        "optionList": [],
+        "words": [
+            "como",
+            "yo",
+            "tu",
+            "agua",
+            "pan"
+        ],
+        "correctOrder": [
+            true,
+            true,
+            false,
+            false,
+            true
+        ]
+    },
+    {
+        "questionSpanish": "Escuchar y Traducir:",
+        "questionKichwa": "",
+        "correctAnswer": "Huevo",
+        "audioPath": "Lulun.mp3",
+        "imagePath": "",
+        "questionType": "listen_and_translate",
+        "optionList": ["Leche", "Huevo", "Pan"],
+        "words": [
+            "como",
+            "yo",
+            "tu",
+            "agua",
+            "pan"
+        ],
+        "correctOrder": [
+            true,
+            true,
+            false,
+            false,
+            true
+        ]
+    }
+]

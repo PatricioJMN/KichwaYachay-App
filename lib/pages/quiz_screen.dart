@@ -1,143 +1,297 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:language_learning_ui/classes/question.dart';
-import 'package:language_learning_ui/classes/quiz.dart';
 import 'package:language_learning_ui/constants.dart';
-import 'package:language_learning_ui/pages/results_page.dart';
+import 'package:language_learning_ui/models/question_model.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class QuizScreen extends StatefulWidget {
   final int unity;
   final String lesson;
+  final List<Question> questions;
 
-  const QuizScreen({Key? key, required this.unity, required this.lesson})
-      : super(key: key);
+  const QuizScreen({
+    Key? key,
+    required this.unity,
+    required this.lesson,
+    required this.questions,
+  }) : super(key: key);
 
   @override
-  State<QuizScreen> createState() => _QuizScreenState();
+  // ignore: library_private_types_in_public_api
+  _QuizScreenState createState() => _QuizScreenState();
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  int totalQuestions = 3;
-  int totalOptions = 3;
-  int questionIndex = 0;
-  int progressIndex = 0;
-
-  Quiz quiz = Quiz(name: "Lección", questions: []);
-
-  Future<void> readJson() async {
-    final String response = await rootBundle.loadString(
-        'assets/database/unity_${widget.unity}_lesson_${widget.lesson}.json');
-    final List<dynamic> data = await json.decode(response);
-    List<int> questionIndices = List<int>.generate(data.length, (i) => i);
-    List<int> questionsAdded = [];
-
-    while (true) {
-      questionIndices.shuffle();
-      int questionIndex = questionIndices[0];
-      if (questionsAdded.contains(questionIndex)) continue;
-      questionsAdded.add(questionIndex);
-
-      final questionData = data[questionIndex];
-      String questionType = questionData['questionType'];
-      late Question question;
-
-      switch (questionType) {
-        case 'multiple_choice':
-          question = Question.fromJson(questionData);
-          question.optionList.shuffle();
-          // print(questionData);
-          question.questionType = questionType;
-          break;
-        case 'drag_and_drop':
-          // question = DragAndDropQuestion.fromJson(data[answer
-          break;
-        case 'question_sorting':
-          // question = QuestionSorting.fromJson(data[answer
-          break;
-        default:
-          throw ArgumentError('Invalid question type: $questionType');
-      }
-
-      quiz.questions.add(question);
-
-      if (quiz.questions.length >= totalQuestions) break;
-    }
-
-    setState(() {});
-  }
+  late int _questionIndex = 0;
+  late Question _currentQuestion;
+  List<bool> _selectedOptions = [];
+  // Multiple Option Variables
+  int _selectedMultipleChoice = -1;
+  // Trasnlate Variables
+  List<bool> _selectedTranslate = [];
+  // Audio Player
+  final player = AudioPlayer();
 
   @override
   void initState() {
     super.initState();
-    readJson();
+    _currentQuestion = widget.questions[_questionIndex];
+    _selectedOptions =
+        List.generate(_currentQuestion.optionList.length, (index) => false);
   }
 
-  void _optionSelected(String selected) {
-    quiz.questions[questionIndex].selectedOption = selected;
-    if (selected == quiz.questions[questionIndex].correctAnswer) {
-      quiz.questions[questionIndex].isCorrect = true;
-      quiz.right += 1;
-    }
-
-    progressIndex += 1;
-    if (questionIndex < totalQuestions - 1) {
-      questionIndex += 1;
-    } else {
-      showDialog(
-          barrierDismissible: false,
-          context: context,
-          builder: (BuildContext context) => _buildResultDialog(context));
-    }
-
-    setState(() {});
-  }
-
-  Widget _buildResultDialog(BuildContext context) {
-    return AlertDialog(
-      title: const Text('Resultados', style: TextStyle(fontSize: 25.0)),
-      backgroundColor: Constants.yellowaguitaKY,
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
+  List<Column> _buildMultipleChoice(
+      List<String> options, Function(int?) onChanged) {
+    return options.asMap().entries.map((entry) {
+      return Column(
         children: [
-          Text(
-            'Preguntas totales: $totalQuestions',
-            style: Theme.of(context).textTheme.bodyLarge,
+          RadioListTile<int>(
+            title: Text(
+              options[entry.key],
+              style: const TextStyle(color: Colors.black, fontSize: 20),
+              textAlign: TextAlign.left,
+            ),
+            value: entry.key,
+            groupValue: _selectedMultipleChoice,
+            onChanged: (int? value) {
+              setState(() {
+                _selectedMultipleChoice = value!;
+              });
+              onChanged(value);
+            },
           ),
-          Text(
-            'Correctas: ${quiz.right}',
-            style: Theme.of(context).textTheme.bodyLarge,
+          const Divider(height: 16),
+        ],
+      );
+    }).toList();
+  }
+
+  List<Widget> _buildSort(
+      List<String> shuffledWords, List<String> correctWords) {
+    // Initialize _selectedWords with all false values if it's not initialized yet
+    if (_selectedTranslate.length != shuffledWords.length) {
+      _selectedTranslate =
+          List.generate(shuffledWords.length, (index) => false);
+    }
+    return [
+      const SizedBox(
+        height: 10,
+      ),
+      const Text(
+        'Selecciona las palabras correctas:',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 16),
+      ),
+      const SizedBox(
+        height: 10,
+      ),
+      ...shuffledWords.asMap().entries.map((entry) {
+        return CheckboxListTile(
+          title: Text(shuffledWords[entry.key]),
+          value: _selectedTranslate[entry.key],
+          onChanged: (value) {
+            setState(() {
+              _selectedTranslate[entry.key] = value!;
+            });
+          },
+        );
+      }).toList(),
+    ];
+  }
+
+  // Escuchar y Traducir
+  List<Widget> _buildListenAndTranslate(
+      String question, List<String> options, Function(int?) onChanged) {
+    return [
+      Column(
+        children: [
+          // Text(
+          //   _currentQuestion.questionSpanish,
+          //   style: const TextStyle(color: Colors.black, fontSize: 20),
+          //   textAlign: TextAlign.center,
+          // ),
+          // const SizedBox(height: 0),
+          InkWell(
+            onTap: () async {
+              await player.play(AssetSource(
+                  'audios/unity_${widget.unity}/lesson_${widget.lesson}/${_currentQuestion.audioPath}'));
+            },
+            child: const Icon(
+              Icons.play_circle_fill_outlined,
+              size: 60,
+              color: Colors.black,
+            ),
           ),
-          Text(
-            'Incorrectas: ${(totalQuestions - quiz.right)}',
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
-          Text(
-            'Porcentaje: ${quiz.percent}%',
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
+          const SizedBox(height: 20),
+          ...options.asMap().entries.map((entry) {
+            return Column(
+              children: [
+                RadioListTile<int>(
+                  title: Text(
+                    options[entry.key],
+                    style: const TextStyle(color: Colors.black, fontSize: 20),
+                    textAlign: TextAlign.left,
+                  ),
+                  value: entry.key,
+                  groupValue: _selectedMultipleChoice,
+                  onChanged: (int? value) {
+                    setState(() {
+                      _selectedMultipleChoice = value!;
+                    });
+                    onChanged(value);
+                  },
+                ),
+                const Divider(height: 16),
+              ],
+            );
+          }).toList(),
         ],
       ),
-      actions: [
-        TextButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                  builder: ((context) => ResultsPage(
-                        quiz: quiz,
-                      ))),
-            );
-          },
-          child: Text(
-            'Ver Respuestas',
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
-        ),
-      ],
-    );
+    ];
+  }
+
+  // Drag and Drop
+  List<Widget> _buildMatch(List<String> words, List<String> linkedWords) {
+    return [
+      const SizedBox(height: 20),
+      const Text(
+        'Une las palabras correctamente:',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 16),
+      ),
+      const SizedBox(height: 20),
+      Wrap(
+        children: List<Widget>.generate(words.length, (index) {
+          return DragTarget<String>(
+            builder: (
+              BuildContext context,
+              List<String?> candidateData,
+              List<dynamic> rejectedData,
+            ) {
+              return Container(
+                key: Key(words[index]),
+                width: 100,
+                height: 100,
+                alignment: Alignment.center,
+                margin: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Text(words[index]),
+              );
+            },
+            onAccept: (data) {
+              if (data == linkedWords[index]) {
+                setState(() {});
+              }
+            },
+          );
+        }).toList(),
+      ),
+    ];
+  }
+
+  // Ordenar verticalmente arrastrando
+  // List<Widget> _buildSort(List<String> words) {
+  //   return [
+  //     const SizedBox(
+  //       height: 20,
+  //     ),
+  //     const Text(
+  //       'Ordena las palabras correctamente:',
+  //       textAlign: TextAlign.center,
+  //       style: TextStyle(fontSize: 16),
+  //     ),
+  //     const SizedBox(
+  //       height: 20,
+  //     ),
+  //     ReorderableListView(
+  //       shrinkWrap: true,
+  //       physics: NeverScrollableScrollPhysics(),
+  //       children: words.asMap().entries.map((entry) {
+  //         return ListTile(
+  //           key: Key(entry.key.toString()),
+  //           title: Text(words[entry.key]),
+  //           trailing: ReorderableDragStartListener(
+  //             index: entry.key,
+  //             child: Icon(Icons.drag_handle),
+  //           ),
+  //         );
+  //       }).toList(),
+  //       onReorder: (int oldIndex, int newIndex) {
+  //         setState(() {
+  //           if (newIndex > oldIndex) {
+  //             newIndex -= 1;
+  //           }
+  //           final String item = words.removeAt(oldIndex);
+  //           words.insert(newIndex, item);
+  //         });
+  //       },
+  //     ),
+  //   ];
+  // }
+
+  bool _listEquals(List<bool> list1, List<String> list2) {
+    int count = 0;
+    for (int i = 0; i < list1.length; i++) {
+      if (list1[i].toString() == list2[i]) {
+        count++;
+      }
+    }
+    return count == list1.length;
+  }
+
+  // Function to check weather the answer is correct or not
+  // Points will be added according to the number of correct answers
+  // NOTE: Replace the print statements to another function which can take count of the punctuation
+  void _checkAnswer() {
+    // Multiple Choice Handler
+    if (_currentQuestion.questionType == 'multiple_choice') {
+      int correctOptionIndex =
+          _currentQuestion.optionList.indexOf(_currentQuestion.correctAnswer);
+      if (_selectedMultipleChoice == correctOptionIndex) {
+        print('Respuesta correcta');
+      } else {
+        print('Respuesta incorrecta');
+      }
+      // Translate Handler
+    } else if (_currentQuestion.questionType == 'translate') {
+      bool isCorrect = false;
+      // print("Selected: $_selectedTranslate");
+      // print("Correct: ${_currentQuestion.correctOrder}");
+      if (_listEquals(_selectedTranslate, _currentQuestion.correctOrder)) {
+        isCorrect = true;
+      }
+      if (isCorrect) {
+        print('Respuesta correcta');
+      } else {
+        print('Respuesta incorrecta');
+      }
+    } else if (_currentQuestion.questionType == 'listen_and_translate') {
+      int correctOptionIndex =
+          _currentQuestion.optionList.indexOf(_currentQuestion.correctAnswer);
+      if (_selectedMultipleChoice == correctOptionIndex) {
+        print('Respuesta correcta');
+      } else {
+        print('Respuesta incorrecta');
+      }
+    }
+
+    _nextQuestion();
+  }
+
+  void _nextQuestion() {
+    setState(() {
+      _questionIndex++;
+      if (_questionIndex < widget.questions.length) {
+        _currentQuestion = widget.questions[_questionIndex];
+        _selectedOptions =
+            List.generate(_currentQuestion.optionList.length, (index) => false);
+      } else {
+        // Agregar alguna lógica adicional cuando se han recorrido todas las preguntas
+        print('Se han recorrido todas las preguntas');
+      }
+    });
   }
 
   @override
@@ -145,105 +299,65 @@ class _QuizScreenState extends State<QuizScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(quiz.name),
+        title: Text('Lección ${widget.lesson}'),
         backgroundColor: Constants.redKY,
         elevation: 0,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 30),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(15),
-              child: LinearProgressIndicator(
-                backgroundColor: Constants.grayKY,
-                color: Constants.redKY,
-                value: progressIndex / totalQuestions,
-                minHeight: 20,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const SizedBox(
+              height: 30,
+            ),
+            Text(
+              _currentQuestion.questionSpanish,
+              style: const TextStyle(color: Colors.black, fontSize: 20),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            // Asegurarse de que la pregunta no esté vacía
+            if (_currentQuestion.questionKichwa.isNotEmpty)
+              Text(
+                _currentQuestion.questionKichwa,
+                style: const TextStyle(color: Colors.black, fontSize: 20),
+                textAlign: TextAlign.center,
               ),
-            ),
-          ),
-          ConstrainedBox(
-            constraints: const BoxConstraints(maxHeight: 550),
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-              child: quiz.questions.isNotEmpty
-                  ? Card(
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Container(
-                            color: Colors.white,
-                            margin: const EdgeInsets.all(15),
-                            child: Text(
-                                '${quiz.questions[questionIndex].questionSpanish}\n${quiz.questions[questionIndex].questionKichwa}',
-                                style: const TextStyle(
-                                  fontSize: 20.0,
-                                  color: Colors.black,
-                                )),
-                          ),
-                          Flexible(
-                            child: ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: totalOptions,
-                              itemBuilder: (_, index) {
-                                return Container(
-                                  // height: 50,
-                                  margin: const EdgeInsets.all(10),
-                                  decoration: BoxDecoration(
-                                    color: Constants.orangeLisKY,
-                                    border: Border.all(
-                                        color: Constants.orangeLisKY, width: 0),
-                                    borderRadius: BorderRadius.circular(6),
-                                  ),
-                                  child: ListTile(
-                                    shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(5),
-                                      ),
-                                    ),
-                                    title: Center(
-                                        child: Text(
-                                            quiz.questions[questionIndex]
-                                                .optionList[index],
-                                            textAlign: TextAlign.center,
-                                            style:
-                                                const TextStyle(fontSize: 15))),
-                                    // IMAGE AFTER THE OPTION
-                                    subtitle: Image.asset(
-                                      'assets/images/unity_${widget.unity}/lesson_${widget.lesson}/${quiz.questions[questionIndex].optionList[index]}.png',
-                                      width: 75,
-                                      height: 75,
-                                    ),
-                                    onTap: () {
-                                      _optionSelected(quiz
-                                          .questions[questionIndex]
-                                          .optionList[index]);
-                                    },
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  : const CircularProgressIndicator(
-                      color: Constants.orangeKY,
-                      backgroundColor: Constants.greenKY,
-                    ),
-            ),
-          ),
-          TextButton(
-            onPressed: () {
-              _optionSelected('Skipped');
-            },
-            child: const Text('Omitir',
-                style: TextStyle(color: Constants.redKY, fontSize: 15)),
-          ),
-        ],
+            // Carga la rutina de opción multiple
+            if (_currentQuestion.questionType == 'multiple_choice')
+              ..._buildMultipleChoice(_currentQuestion.optionList, (value) {
+                setState(() {
+                  _selectedOptions[_selectedMultipleChoice] =
+                      value == _currentQuestion.correctAnswer;
+                });
+              }),
+            // Carga la rutina de traducir
+            if (_currentQuestion.questionType == 'translate')
+              ..._buildSort(
+                  _currentQuestion.words, _currentQuestion.correctOrder),
+            // Carga la rutina de escuchar y traducir
+            if (_currentQuestion.questionType == 'listen_and_translate')
+              ..._buildListenAndTranslate(
+                  _currentQuestion.questionSpanish, _currentQuestion.optionList,
+                  (value) {
+                setState(() {
+                  _selectedOptions[_selectedMultipleChoice] =
+                      value == _currentQuestion.correctAnswer;
+                });
+              }),
+            // Carga la rutina de Drag and Drop
+            if (_currentQuestion.questionType == 'drag_and_drop')
+              ..._buildMatch(
+                  _currentQuestion.words, _currentQuestion.optionList),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _checkAnswer,
+        child: const Icon(Icons.check),
       ),
     );
   }
