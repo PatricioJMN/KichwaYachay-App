@@ -15,96 +15,6 @@
         "correctOrder": []
     },
     {
-        "questionSpanish": "¿Cómo se dice Delfín?",
-        "questionKichwa": "",
-        "correctAnswer": "Walchaka",
-        "audioPath": "",
-        "imagePath": "Walchaka",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Walchaka",
-            "Añanku",
-            "Apankura"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
-        "questionSpanish": "¿Cómo se dice Serpiente?",
-        "questionKichwa": "",
-        "correctAnswer": "Amaru",
-        "audioPath": "",
-        "imagePath": "Amaru",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Amaru",
-            "Allku",
-            "Walchaka"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
-        "questionSpanish": "¿Cómo se dice Hormiga?",
-        "questionKichwa": "",
-        "correctAnswer": "Añanku",
-        "audioPath": "",
-        "imagePath": "Añanku",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Añanku",
-            "Misi",
-            "Walchaka"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
-        "questionSpanish": "¿Cómo se dice Cangrejo?",
-        "questionKichwa": "",
-        "correctAnswer": "Apankura",
-        "audioPath": "",
-        "imagePath": "Apankura",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Apankura",
-            "Walchaka",
-            "Añanku"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
-        "questionSpanish": "¿Cómo se dice Gallina?",
-        "questionKichwa": "",
-        "correctAnswer": "Atallpa",
-        "audioPath": "",
-        "imagePath": "Atallpa",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Atallpa",
-            "Kushillu",
-            "Allku"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
-        "questionSpanish": "¿Cómo se dice Lobo?",
-        "questionKichwa": "",
-        "correctAnswer": "Atuk",
-        "audioPath": "",
-        "imagePath": "Atuk",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Atuk",
-            "Walchaka",
-            "Kulta"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
         "questionSpanish": "¿Cómo se dice Pez?",
         "questionKichwa": "",
         "correctAnswer": "Challwa",
@@ -115,66 +25,6 @@
             "Challwa",
             "Misi",
             "Walchaka"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
-        "questionSpanish": "¿Cómo se dice Caracol?",
-        "questionKichwa": "",
-        "correctAnswer": "Churu",
-        "audioPath": "",
-        "imagePath": "Churu",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Churu",
-            "Atuk",
-            "Kulta"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
-        "questionSpanish": "¿Cómo se dice Lechuza?",
-        "questionKichwa": "",
-        "correctAnswer": "Chushik",
-        "audioPath": "",
-        "imagePath": "Chushik",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Chushik",
-            "Kushillu",
-            "Churu"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
-        "questionSpanish": "¿Cómo se dice Rana?",
-        "questionKichwa": "",
-        "correctAnswer": "Hampatu",
-        "audioPath": "",
-        "imagePath": "Hampatu",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Hampatu",
-            "Allku",
-            "Atuk"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
-        "questionSpanish": "¿Cómo se dice Cerdo?",
-        "questionKichwa": "",
-        "correctAnswer": "Kuchi",
-        "audioPath": "",
-        "imagePath": "Kuchi",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Kuchi",
-            "Churu",
-            "Apankura"
         ],
         "words": [],
         "correctOrder": []
@@ -195,36 +45,6 @@
         "correctOrder": []
     },
     {
-        "questionSpanish": "¿Cómo se dice Condor?",
-        "questionKichwa": "",
-        "correctAnswer": "Kuntur",
-        "audioPath": "",
-        "imagePath": "Kuntur",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Kuntur",
-            "Kushillu",
-            "Kulta"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
-        "questionSpanish": "¿Cómo se dice Mono?",
-        "questionKichwa": "",
-        "correctAnswer": "Kushillu",
-        "audioPath": "",
-        "imagePath": "Kushillu",
-        "questionType": "multiple_choice",
-        "optionList": [
-            "Kushillu",
-            "Allku",
-            "Atuk"
-        ],
-        "words": [],
-        "correctOrder": []
-    },
-    {
         "questionSpanish": "¿Cómo se dice Gato?",
         "questionKichwa": "",
         "correctAnswer": "Misi",
@@ -238,5 +58,19 @@
         ],
         "words": [],
         "correctOrder": []
+    },
+    {
+        "questionSpanish": "El perro es negro",
+        "questionKichwa": "",
+        "correctAnswer": "",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "vertical_sort",
+        "optionList": [],
+        "words": [
+            "kan",
+            "yanami",
+            "Allkuka"],
+        "correctOrder": ["Allkuka", "yanami", "kan"]
     }
 ]

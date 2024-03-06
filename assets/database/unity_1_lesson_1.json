@@ -82,19 +82,7 @@
         "imagePath": "",
         "questionType": "listen_and_translate",
         "optionList": ["Leche", "Huevo", "Pan"],
-        "words": [
-            "como",
-            "yo",
-            "tu",
-            "agua",
-            "pan"
-        ],
-        "correctOrder": [
-            true,
-            true,
-            false,
-            false,
-            true
-        ]
+        "words": [],
+        "correctOrder": []
     }
 ]

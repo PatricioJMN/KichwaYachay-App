@@ -28,6 +28,8 @@ class _QuizScreenState extends State<QuizScreen> {
   int _selectedMultipleChoice = -1;
   // Trasnlate Variables
   List<bool> _selectedTranslate = [];
+  // Vertical Sort Variables
+  List<String> _wordsList = [];
   // Audio Player
   final player = AudioPlayer();
 
@@ -39,6 +41,7 @@ class _QuizScreenState extends State<QuizScreen> {
         List.generate(_currentQuestion.optionList.length, (index) => false);
   }
 
+  // Opción Múltiple
   List<Column> _buildMultipleChoice(
       List<String> options, Function(int?) onChanged) {
     return options.asMap().entries.map((entry) {
@@ -48,10 +51,13 @@ class _QuizScreenState extends State<QuizScreen> {
             title: Text(
               options[entry.key],
               style: const TextStyle(color: Colors.black, fontSize: 20),
-              textAlign: TextAlign.left,
+              textAlign: TextAlign.center,
             ),
             value: entry.key,
             groupValue: _selectedMultipleChoice,
+            secondary: Image(
+                image: AssetImage(
+                    'assets/images/unity_${widget.unity}/lesson_${widget.lesson}/${options[entry.key]}.png')),
             onChanged: (int? value) {
               setState(() {
                 _selectedMultipleChoice = value!;
@@ -59,13 +65,14 @@ class _QuizScreenState extends State<QuizScreen> {
               onChanged(value);
             },
           ),
-          const Divider(height: 16),
+          const Divider(height: 50),
         ],
       );
     }).toList();
   }
 
-  List<Widget> _buildSort(
+  // Seleccionar
+  List<Widget> _buildSelectAndSort(
       List<String> shuffledWords, List<String> correctWords) {
     // Initialize _selectedWords with all false values if it's not initialized yet
     if (_selectedTranslate.length != shuffledWords.length) {
@@ -88,6 +95,11 @@ class _QuizScreenState extends State<QuizScreen> {
         return CheckboxListTile(
           title: Text(shuffledWords[entry.key]),
           value: _selectedTranslate[entry.key],
+          // secondary: Image.asset(
+          //   'images/unity_${widget.unity}/lesson_${widget.lesson}/${shuffledWords[entry.key]}.png',
+          //   height: 10.0,
+          //   width: 10.0,
+          // ),
           onChanged: (value) {
             setState(() {
               _selectedTranslate[entry.key] = value!;
@@ -113,7 +125,7 @@ class _QuizScreenState extends State<QuizScreen> {
           InkWell(
             onTap: () async {
               await player.play(AssetSource(
-                  'audios/unity_${widget.unity}/lesson_${widget.lesson}/${_currentQuestion.audioPath}'));
+                  'assets/audios/unity_${widget.unity}/lesson_${widget.lesson}/${_currentQuestion.audioPath}'));
             },
             child: const Icon(
               Icons.play_circle_fill_outlined,
@@ -192,53 +204,64 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   // Ordenar verticalmente arrastrando
-  // List<Widget> _buildSort(List<String> words) {
-  //   return [
-  //     const SizedBox(
-  //       height: 20,
-  //     ),
-  //     const Text(
-  //       'Ordena las palabras correctamente:',
-  //       textAlign: TextAlign.center,
-  //       style: TextStyle(fontSize: 16),
-  //     ),
-  //     const SizedBox(
-  //       height: 20,
-  //     ),
-  //     ReorderableListView(
-  //       shrinkWrap: true,
-  //       physics: NeverScrollableScrollPhysics(),
-  //       children: words.asMap().entries.map((entry) {
-  //         return ListTile(
-  //           key: Key(entry.key.toString()),
-  //           title: Text(words[entry.key]),
-  //           trailing: ReorderableDragStartListener(
-  //             index: entry.key,
-  //             child: Icon(Icons.drag_handle),
-  //           ),
-  //         );
-  //       }).toList(),
-  //       onReorder: (int oldIndex, int newIndex) {
-  //         setState(() {
-  //           if (newIndex > oldIndex) {
-  //             newIndex -= 1;
-  //           }
-  //           final String item = words.removeAt(oldIndex);
-  //           words.insert(newIndex, item);
-  //         });
-  //       },
-  //     ),
-  //   ];
-  // }
+  List<Widget> _buildVerticalSort(
+      List<String> words, List<String> correctOrder) {
+    return [
+      const SizedBox(
+        height: 20,
+      ),
+      const Text(
+        'Ordena las palabras para formar la frase correcta:',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 20),
+      ),
+      const SizedBox(
+        height: 20,
+      ),
+      ReorderableListView(
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
+        children: words.asMap().entries.map((entry) {
+          return ListTile(
+            key: Key(entry.key.toString()),
+            title: Text(
+              words[entry.key],
+              style: const TextStyle(color: Colors.black, fontSize: 20),
+              textAlign: TextAlign.center,
+            ),
+            trailing: ReorderableDragStartListener(
+              index: entry.key,
+              child: const Icon(Icons.drag_handle),
+            ),
+          );
+        }).toList(),
+        onReorder: (int oldIndex, int newIndex) {
+          setState(() {
+            if (newIndex > oldIndex) {
+              newIndex -= 1;
+            }
+            final String item = words.removeAt(oldIndex);
+            words.insert(newIndex, item);
+            _wordsList = words;
+          });
+        },
+      ),
+    ];
+  }
 
-  bool _listEquals(List<bool> list1, List<String> list2) {
+  bool _listEquals(List list1, List list2) {
     int count = 0;
     for (int i = 0; i < list1.length; i++) {
-      if (list1[i].toString() == list2[i]) {
+      if (list1[i].toString() == list2[i].toString() &&
+          list1.length == list2.length) {
         count++;
       }
     }
-    return count == list1.length;
+    if (count == 3) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   // Function to check weather the answer is correct or not
@@ -267,7 +290,29 @@ class _QuizScreenState extends State<QuizScreen> {
       } else {
         print('Respuesta incorrecta');
       }
+    } else if (_currentQuestion.questionType == 'vertical_sort') {
+      bool isCorrect = false;
+      // print("Selected: $_wordsList");
+      // print("Correct: ${_currentQuestion.correctOrder}");
+      if (_listEquals(_wordsList, _currentQuestion.correctOrder)) {
+        isCorrect = true;
+      }
+      if (isCorrect) {
+        print('Respuesta correcta');
+      } else {
+        print('Respuesta incorrecta');
+      }
+      // Listen and Translate Handler
     } else if (_currentQuestion.questionType == 'listen_and_translate') {
+      int correctOptionIndex =
+          _currentQuestion.optionList.indexOf(_currentQuestion.correctAnswer);
+      if (_selectedMultipleChoice == correctOptionIndex) {
+        print('Respuesta correcta');
+      } else {
+        print('Respuesta incorrecta');
+      }
+      // Drag and Drop Handler
+    } else if (_currentQuestion.questionType == 'drag_and_drop') {
       int correctOptionIndex =
           _currentQuestion.optionList.indexOf(_currentQuestion.correctAnswer);
       if (_selectedMultipleChoice == correctOptionIndex) {
@@ -336,7 +381,11 @@ class _QuizScreenState extends State<QuizScreen> {
               }),
             // Carga la rutina de traducir
             if (_currentQuestion.questionType == 'translate')
-              ..._buildSort(
+              ..._buildSelectAndSort(
+                  _currentQuestion.words, _currentQuestion.correctOrder),
+            // Carga la rutina de ordenar verticalmente
+            if (_currentQuestion.questionType == 'vertical_sort')
+              ..._buildVerticalSort(
                   _currentQuestion.words, _currentQuestion.correctOrder),
             // Carga la rutina de escuchar y traducir
             if (_currentQuestion.questionType == 'listen_and_translate')
@@ -345,6 +394,7 @@ class _QuizScreenState extends State<QuizScreen> {
                   (value) {
                 setState(() {
                   _selectedOptions[_selectedMultipleChoice] =
+                      // ignore: unrelated_type_equality_checks
                       value == _currentQuestion.correctAnswer;
                 });
               }),
