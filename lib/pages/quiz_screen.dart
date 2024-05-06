@@ -55,9 +55,12 @@ class _QuizScreenState extends State<QuizScreen> {
             ),
             value: entry.key,
             groupValue: _selectedMultipleChoice,
-            secondary: Image(
-                image: AssetImage(
-                    'assets/images/unity_${widget.unity}/lesson_${widget.lesson}/${options[entry.key]}.png')),
+            // Imágen, activar cuando se tengan todas las imágenes sobre las opciones.
+            // Alternativamente, se puede ingresar una sola imágen fuera del RadioListTile
+            // La imágen que se usaría sería la que está en el Json
+            // secondary: Image(
+            //     image: AssetImage(
+            //         'assets/images/unity_${widget.unity}/lesson_${widget.lesson}/${options[entry.key]}.png')),
             onChanged: (int? value) {
               setState(() {
                 _selectedMultipleChoice = value!;
@@ -257,7 +260,7 @@ class _QuizScreenState extends State<QuizScreen> {
         count++;
       }
     }
-    if (count == 3) {
+    if (count == list2.length) {
       return true;
     } else {
       return false;

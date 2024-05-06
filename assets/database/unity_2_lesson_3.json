@@ -1,33 +1,83 @@
 [
     {
-        "questionSpanish": "¿Cuál de los siguientes es agua?",
+        "questionSpanish": "¿Cuál de los siguientes es fréjol?",
         "questionKichwa": "",
-        "correctAnswer": "Yaku",
+        "correctAnswer": "Purutu",
         "audioPath": "",
-        "imagePath": "Yaku",
+        "imagePath": "Purutu",
         "questionType": "multiple_choice",
         "optionList": [
-            "Yaku",
             "Ñuñu",
-            "Tanta"
+            "Purutu",
+            "Palta"
         ],
         "words": [],
         "correctOrder": []
     },
     {
-        "questionSpanish": "¿Cuál de los siguientes es queso?",
+        "questionSpanish": "¿Cuál de los siguientes es aguacate?",
         "questionKichwa": "",
-        "correctAnswer": "Makinchu",
+        "correctAnswer": "Palta",
         "audioPath": "",
-        "imagePath": "Makinchu",
+        "imagePath": "Palta",
         "questionType": "multiple_choice",
         "optionList": [
-            "Tanta",
             "Aycha",
-            "Makinchu"
+            "Purutu",
+            "Palta"
         ],
         "words": [],
         "correctOrder": []
+    },
+    {
+        "questionSpanish": "Traducir:",
+        "questionKichwa": "Payka paltami mikun",
+        "correctAnswer": "",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "translate",
+        "optionList": [],
+        "words": [
+            "ellos",
+            "ella",
+            "bebe",
+            "come",
+            "queso",
+            "aguacate"
+        ],
+        "correctOrder": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            true
+        ]
+    },
+    {
+        "questionSpanish": "Traducir:",
+        "questionKichwa": "Ñukaka  purutumi mikuni",
+        "correctAnswer": "",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "translate",
+        "optionList": [],
+        "words": [
+            "yo",
+            "ella",
+            "bebe",
+            "como",
+            "fréjol",
+            "aguacate"
+        ],
+        "correctOrder": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+        ]
     },
     {
         "questionSpanish": "¿Cuál de los siguientes es carne?",
@@ -87,30 +137,5 @@
         "optionList": ["Ñuñu", "Purutu", "Palta"],
         "words": [],
         "correctOrder": []
-    },
-    {
-        "questionSpanish": "Traducir:",
-        "questionKichwa": "Payka paltami mikun",
-        "correctAnswer": "",
-        "audioPath": "",
-        "imagePath": "",
-        "questionType": "translate",
-        "optionList": [],
-        "words": [
-            "ellos",
-            "ella",
-            "bebe",
-            "come",
-            "queso",
-            "aguacate"
-        ],
-        "correctOrder": [
-            false,
-            true,
-            false,
-            true,
-            false,
-            true
-        ]
     }
 ]

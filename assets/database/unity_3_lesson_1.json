@@ -1,0 +1,128 @@
+[
+    {
+        "questionSpanish": "Completa la conversación:",
+        "questionKichwa": "Sisa:__________\nMaya: Allimi kani",
+        "correctAnswer": "Imanalla",
+        "audioPath": "Imanalla",
+        "imagePath": "imagen_con_signo_de_interrogacion",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Imatak",
+            "Ima horatak",
+            "Imanalla"
+        ],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "Completa la conversación:",
+        "questionKichwa": "Sisa: Imanalla\nMaya: Alli mi ____",
+        "correctAnswer": "Kani",
+        "audioPath": "Kani",
+        "imagePath": "pulgares_arriba",
+        "questionType": "multiple_choice",
+        "optionList": [
+            "Kanka",
+            "Kanki",
+            "Kani"
+        ],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "",
+        "questionKichwa": "",
+        "correctAnswer": "",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "vertical_sort",
+        "optionList": [],
+        "words": [
+            "Allimi",
+            "Allimi kani. Kikinka.",
+            "Imanalla"
+        ],
+        "correctOrder": [
+            "Imanalla",
+            "Allimi kani. Kikinka.",
+            "Allimi"
+        ]
+    },
+    {
+        "questionSpanish": "",
+        "questionKichwa": "",
+        "correctAnswer": "",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "vertical_sort",
+        "optionList": [],
+        "words": [
+            "Kikinka",
+            "Alli",
+            "kani",
+            "mi"
+        ],
+        "correctOrder": [
+            "Alli",
+            "mi",
+            "kani",
+            "Kikinka"
+        ]
+    },
+
+    {
+        "questionSpanish": "Cuál de los siguientes es:",
+        "questionKichwa": "Hola. ¿Cómo estás?",
+        "correctAnswer": "Imanalla",
+        "audioPath": "",
+        "imagePath": "imagen_con_signo_de_interrogacion",
+        "questionType": "multiple_choice",
+        "optionList": ["Imanalla", "Imatak", "Imana"],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "Cuál de los siguientes es:",
+        "questionKichwa": "Usted",
+        "correctAnswer": "Kikin",
+        "audioPath": "",
+        "imagePath": "Imagen_de_un_mano_apuntando_al_usuario",
+        "questionType": "multiple_choice",
+        "optionList": ["Alli", "Kikin", "Mi"],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "Cuál de los siguientes es:",
+        "questionKichwa": "Estoy",
+        "correctAnswer": "kani",
+        "audioPath": "",
+        "imagePath": "",
+        "questionType": "multiple_choice",
+        "optionList": ["Alli", "kani", "Kikin"],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "Escuche y elija la respuesta correcta",
+        "questionKichwa": "",
+        "correctAnswer": "Allimi kani.",
+        "audioPath": "u3_l1_ax",
+        "imagePath": "imagen_de_signo_de_interrogacion",
+        "questionType": "multiple_choice",
+        "optionList": ["Alli", "Allimi kanki", "Allimi kani."],
+        "words": [],
+        "correctOrder": []
+    },
+    {
+        "questionSpanish": "Escuche y elija la respuesta correcta",
+        "questionKichwa": "",
+        "correctAnswer": "Allimi kani.",
+        "audioPath": "u3_l1_ax",
+        "imagePath": "Imagen_de_un_mano_apuntando_al_usuario",
+        "questionType": "multiple_choice",
+        "optionList": ["Allimi kani. Kinkinka.", "Allimi kani.", "Allimi kan."],
+        "words": [],
+        "correctOrder": []
+    }
+]

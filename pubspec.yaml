@@ -88,7 +88,6 @@ flutter:
     
     # Images
       # Unity 1
-    - assets/images/unity_1/lesson_1/Yana.png
     - assets/images/unity_1/lesson_1/
     - assets/images/unity_1/lesson_2/
     - assets/images/unity_1/lesson_3/
@@ -99,8 +98,6 @@ flutter:
       # Unity 3
     - assets/images/unity_3/lesson_1/
     - assets/images/unity_3/lesson_2/
-
-
 
     - assets/images/
     - assets/svg/
@@ -116,9 +113,9 @@ flutter:
     - assets/database/unity_2_lesson_2.json
     - assets/database/unity_2_lesson_3.json
     #       # Unity 3
-    # - assets/database/unity_3_lesson_1.json
+    - assets/database/unity_3_lesson_1.json
     # - assets/database/unity_3_lesson_2.json
-  #   - images/a_dot_ham.jpeg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
