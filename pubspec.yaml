@@ -27,7 +27,7 @@ dependencies:
   flutter_svg: ^2.0.7
   google_fonts: ^6.1.0
   cloud_firestore: ^4.1.0
-  firebase_core: ^2.3.0
+  # firebase_core: ^2.3.0
   postgres: ^2.5.2
   provider: ^6.0.4
   supabase: ^1.2.0
@@ -78,13 +78,13 @@ flutter:
   assets:
     # Audios
       # Unity 1
-    - assets/audios/unity_1/lesson_1/
-    - assets/audios/unity_1/lesson_2/
-    - assets/audios/unity_1/lesson_3/
+    # - assets/audios/unity_1/lesson_1/
+    # - assets/audios/unity_1/lesson_2/
+    # - assets/audios/unity_1/lesson_3/
       # Unity 2
     - assets/audios/unity_2/lesson_1/
-    - assets/audios/unity_2/lesson_2/
-    - assets/audios/unity_2/lesson_3/
+    # - assets/audios/unity_2/lesson_2/
+    # - assets/audios/unity_2/lesson_3/
     
     # Images
       # Unity 1
